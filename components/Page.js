@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled, { ThemeProvider, injectGlobal } from 'styled-components';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import Meta from './Meta';
 import Navbar from './Navbar';
@@ -14,12 +14,29 @@ const StyledPage = styled.div`
   background: ${props => props.theme.blueCool10};
 `;
 
+const GlobalStyle = createGlobalStyle`
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    box-sizing: inherit;
+    font-size: 10px;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+  }
+`;
+
 class Page extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
         <StyledPage>
           <Meta />
+          <GlobalStyle />
           <Navbar />
           {this.props.children}
           <p>Footer Goes here</p>
