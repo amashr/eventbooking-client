@@ -6,11 +6,7 @@ const StyledNavbar = styled.nav`
   display: flex;
 `;
 
-const Logo = styled.div`
-  a {
-    text-decoration: none;
-  }
-`;
+const Logo = styled.div``;
 
 const Navbar = () => (
   <StyledNavbar>

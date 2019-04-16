@@ -28,6 +28,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
   }
+
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.blueCool3}
+  }
 `;
 
 class Page extends Component {
