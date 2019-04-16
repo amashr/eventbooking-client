@@ -1,7 +1,13 @@
 import Link from 'next/link';
 
-const Nav = () => (
+const Navbar = () => (
   <nav>
+    <div>
+      <Link href="/">
+        <a>Event Booking</a>
+      </Link>
+    </div>
+
     <ul>
       <li>
         <Link href="/concerts">
@@ -45,4 +51,4 @@ const Nav = () => (
   </nav>
 );
 
-export default Nav;
+export default Navbar;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from './Header';
+import Navbar from './Navbar';
 import Meta from './Meta';
 
 class Page extends Component {
@@ -7,7 +7,7 @@ class Page extends Component {
     return (
       <>
         <Meta />
-        <Header />
+        <Navbar />
         {this.props.children}
         <p>Footer Goes here</p>
       </>
