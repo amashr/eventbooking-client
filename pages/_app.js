@@ -6,11 +6,11 @@ class MyApp extends App {
     const { Component } = this.props;
 
     return (
-      <Page>
-        <Container>
+      <Container>
+        <Page>
           <Component />
-        </Container>
-      </Page>
+        </Page>
+      </Container>
     );
   }
 }
