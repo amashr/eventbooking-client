@@ -5,12 +5,12 @@ import Meta from './Meta';
 class Page extends Component {
   render() {
     return (
-      <div>
+      <>
         <Meta />
         <Header />
         {this.props.children}
         <p>Footer Goes here</p>
-      </div>
+      </>
     );
   }
 }
