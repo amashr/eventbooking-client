@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import Meta from './Meta';
@@ -9,24 +9,21 @@ const theme = {
   blueCool10: '#F5F7FA'
 };
 
-const StyledPage = styled.div`
-  color: ${props => props.theme.blueCool3};
-  background: ${props => props.theme.blueCool10};
-`;
-
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
-    box-sizing: border-box;
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
   }
 
   html {
-    box-sizing: inherit;
+    box-sizing: border-box;
     font-size: 10px;
   }
 
   body {
-    padding: 0;
-    margin: 0;
+    color: ${props => props.theme.blueCool3};
+    background: ${props => props.theme.blueCool10};
   }
 
   a {
@@ -39,13 +36,13 @@ class Page extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <StyledPage>
+        <Fragment>
           <Meta />
           <GlobalStyle />
           <Navbar />
           {this.props.children}
           <p>Footer Goes here</p>
-        </StyledPage>
+        </Fragment>
       </ThemeProvider>
     );
   }
