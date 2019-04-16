@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import Meta from './Meta';
@@ -36,13 +36,13 @@ class Page extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <Fragment>
+        <>
           <Meta />
           <GlobalStyle />
           <Navbar />
           {this.props.children}
           <p>Footer Goes here</p>
-        </Fragment>
+        </>
       </ThemeProvider>
     );
   }
