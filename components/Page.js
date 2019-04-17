@@ -6,7 +6,8 @@ import Navbar from './Navbar';
 
 const theme = {
   blueCool3: '#3E4C59',
-  blueCool10: '#F5F7FA'
+  blueCool10: '#F5F7FA',
+  red: '#CF1124'
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -22,11 +23,11 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Enrique';
-    src: url('/static/fonts/EnriqueMedium.woff2') format('woff2'),
-       url('/static/fonts/EnriqueMedium.woff') format('woff'),
-       url('/static/fonts/EnriqueMedium.ttf')  format('truetype'),
-       url('/static/fonts/EnriqueMedium.svg#EnriqueMedium') format('svg');
-    font-weight: 500;
+    src: url('/static/fonts/EnriqueBold.woff2') format('woff2'),
+       url('/static/fonts/EnriqueBold.woff') format('woff'),
+       url('/static/fonts/EnriqueBold.ttf')  format('truetype'),
+       url('/static/fonts/EnriqueBold.svg#EnriqueBold') format('svg');
+    font-weight: bold;
     font-style: normal;
   }
   
@@ -47,11 +48,13 @@ const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.blueCool3};
     background: ${props => props.theme.blueCool10};
     text-rendering: optimizeLegibility;
+    letter-spacing: 1.2px;
+    font-size: 1.6rem;
   }
 
   a {
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
     color: ${props => props.theme.blueCool3}
   }
 
