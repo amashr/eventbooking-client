@@ -42,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-family: Enrique;
+    font-family: Enrique, 'sans-serif';
     font-weight: 400;
     color: ${props => props.theme.blueCool3};
     background: ${props => props.theme.blueCool10};
