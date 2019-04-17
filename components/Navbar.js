@@ -4,7 +4,10 @@ import styled from 'styled-components';
 import Btn from './Btn';
 
 const StyledNavbar = styled.nav`
-  background: purple;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  width: 100%;
   padding: 2rem 6rem;
   display: flex;
   align-items: center;
