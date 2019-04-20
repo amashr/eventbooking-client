@@ -13,6 +13,7 @@ const StyledMain = styled.main`
   background-position-y: -2px;
   height: 400px;
   padding-top: 100px;
+  color: ${props => props.theme.blueCool10};
 `;
 
 const Main = () => (
