@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const StyledBtn = styled.a`
   border: 0.2rem solid ${props => props.theme.red};
-  color: ${props => props.theme.red} !important;
+  color: ${props => props.theme.red};
   border-radius: 0.4rem;
   padding: 1.2rem 3rem;
   cursor: pointer;

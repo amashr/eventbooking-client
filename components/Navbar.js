@@ -36,7 +36,7 @@ const NavbarLinkContainer = styled.ul`
   align-items: center;
 
   li {
-    a {
+    .link {
       color: ${props => props.theme.blueCool10};
     }
   }
@@ -58,27 +58,27 @@ const Navbar = () => (
       <NavbarLinkContainer>
         <li>
           <Link href="/concerts">
-            <a>Concerts</a>
+            <a className="link">Concerts</a>
           </Link>
         </li>
         <li>
           <Link href="/sports">
-            <a>Sports</a>
+            <a className="link">Sports</a>
           </Link>
         </li>
         <li>
           <Link href="/arts">
-            <a>Arts &amp; Theater</a>
+            <a className="link">Arts &amp; Theater</a>
           </Link>
         </li>
         <li>
           <Link href="/">
-            <a>For You</a>
+            <a className="link">For You</a>
           </Link>
         </li>
         <li>
           <Link href="/">
-            <a>More</a>
+            <a className="link">More</a>
           </Link>
         </li>
       </NavbarLinkContainer>
@@ -86,7 +86,7 @@ const Navbar = () => (
       <NavbarLinkContainer>
         <li>
           <Link href="/login">
-            <a>Sign In</a>
+            <a className="link">Sign In</a>
           </Link>
         </li>
         <li>
