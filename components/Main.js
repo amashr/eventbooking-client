@@ -39,7 +39,7 @@ const StyledForm = styled.div`
     box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.3);
     width: 75%;
     padding: 1.6rem 2rem;
-    margin-right: -4rem;
+    margin-right: -5rem;
     transition: all 0.2s;
 
     &:focus {
@@ -64,7 +64,7 @@ const Main = () => (
       <h1>Aliquam rutrum pellentesque sempere.</h1>
 
       <StyledForm>
-        <input type="text" placeholder="Search event by keyword " />
+        <input type="text" placeholder="Search events by keyword " />
         <ButtonIcon>
           <svg
             xmlns="http://www.w3.org/2000/svg"
