@@ -6,6 +6,8 @@ import Navbar from './Navbar';
 
 const theme = {
   blueCool3: '#3E4C59',
+  blueCool6: '#7B8794',
+  blueCool9: '#E4E7EB',
   blueCool10: '#F5F7FA',
   red: '#CF1124'
 };

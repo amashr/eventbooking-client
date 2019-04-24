@@ -32,19 +32,29 @@ const StyledForm = styled.div`
 
   input {
     font-family: inherit;
-    font-size: 2.7rem;
+    font-size: 3rem;
     color: ${props => props.theme.blueCool3};
     background: ${props => props.theme.blueCool10};
     border: none;
+    border-radius: 0.4rem;
     box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.3);
-    width: 75%;
-    padding: 1.6rem 2rem;
+    width: 60%;
+    padding: 2rem;
     margin-right: -5rem;
     transition: all 0.2s;
 
     &:focus {
       outline: none;
+      background: ${props => props.theme.blueCool9};
       width: 100%;
+    }
+
+    &::placeholder {
+      color: ${props => props.theme.blueCool6};
+    }
+
+    &:focus + button {
+      background: ${props => props.theme.blueCool9};
     }
   }
 `;
@@ -55,6 +65,10 @@ const ButtonIcon = styled.button`
 
   &:focus {
     outline: none;
+  }
+
+  svg {
+    fill: ${props => props.theme.blueCool3};
   }
 `;
 
