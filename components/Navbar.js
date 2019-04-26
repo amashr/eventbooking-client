@@ -37,7 +37,16 @@ const NavbarLinkContainer = styled.ul`
 
   li {
     .link {
-      color: ${props => props.theme.blueCool10};
+      &,
+      &:visited {
+        color: ${props => props.theme.blueCool10};
+        transition: all 0.2s;
+      }
+
+      &:hover,
+      &:active {
+        color: ${props => props.theme.red};
+      }
     }
   }
 
