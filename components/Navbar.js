@@ -34,19 +34,30 @@ const Logo = styled.div`
 const NavbarMenu = styled.div`
   margin-left: auto;
   cursor: pointer;
-  display: none;
 
   svg {
     fill: var(--blueCool6);
   }
+
+  @media only screen and (min-width: ${props => props.theme.tabland}) {
+    & {
+      display: none;
+    }
+  }
 `;
 
 const NavbarItem = styled.div`
-  flex: 1;
-  margin-left: 6rem;
+  display: none;
 
-  display: flex;
-  justify-content: space-between;
+  @media only screen and (min-width: ${props => props.theme.tabland}) {
+    & {
+      flex: 1;
+      margin-left: 6rem;
+
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 `;
 
 const NavbarLinkContainer = styled.ul`

@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
-import { createGlobalStyle } from 'styled-components';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import Meta from './Meta';
 import Navbar from './Navbar';
+
+const theme = {
+  tabport: '37.5em', // 600px
+  tabland: '56.25em', // 900px
+  desktop: '75em', // 1200px
+  bigdesktop: '112.5em' // 1800px
+};
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -34,11 +41,6 @@ const GlobalStyle = createGlobalStyle`
     --red: #EF4E4E;
 
     --transition: all .4s;
-
-    --tabport:  37.5em; /* 600px */
-    --tabland:  56.25em; /* 900px */
-    --desktop:  75em; /* 1200px */
-    --bigdesktop:  112.5em; /* 1800px */
   }
   
   *, *::before, *::after {
@@ -76,13 +78,15 @@ const GlobalStyle = createGlobalStyle`
 class Page extends Component {
   render() {
     return (
-      <>
-        <Meta />
-        <GlobalStyle />
-        <Navbar />
-        {this.props.children}
-        <p>Footer Goes here</p>
-      </>
+      <ThemeProvider theme={theme}>
+        <>
+          <Meta />
+          <GlobalStyle />
+          <Navbar />
+          {this.props.children}
+          <p>Footer Goes here</p>
+        </>
+      </ThemeProvider>
     );
   }
 }
