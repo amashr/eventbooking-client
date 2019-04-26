@@ -21,6 +21,7 @@ const Logo = styled.div`
     &,
     &:visited {
       color: var(--red);
+      transition: var(--transition);
     }
 
     &:hover,
@@ -59,7 +60,7 @@ const NavbarLinkContainer = styled.ul`
       &,
       &:visited {
         color: var(--blueCool10);
-        transition: all 0.4s;
+        transition: var(--transition);
       }
 
       &:hover,

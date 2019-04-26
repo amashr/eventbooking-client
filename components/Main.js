@@ -41,7 +41,7 @@ const StyledForm = styled.div`
     width: 60%;
     padding: 2rem;
     margin-right: -5rem;
-    transition: all 0.2s;
+    transition: var(--transition);
 
     &:focus {
       outline: none;

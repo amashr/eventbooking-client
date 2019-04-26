@@ -15,7 +15,7 @@ const StyledBtn = styled.a`
     font-size: 1.25rem;
     display: flex;
     align-items: center;
-    transition: all 0.4s;
+    transition: var(--transition);
   }
 
   &:hover,

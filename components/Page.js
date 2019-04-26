@@ -32,6 +32,8 @@ const GlobalStyle = createGlobalStyle`
     --blueCool10: #F5F7FA;
     --redDark: #CF1124;
     --red: #EF4E4E;
+
+    --transition: all .4s;
   }
   
   *, *::before, *::after {
