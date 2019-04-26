@@ -20,12 +20,12 @@ const Logo = styled.div`
   a {
     &,
     &:visited {
-      color: ${props => props.theme.red};
+      color: var(--red);
     }
 
     &:hover,
     &:active {
-      color: ${props => props.theme.redDark};
+      color: var(--redDark);
     }
   }
 `;
@@ -36,7 +36,7 @@ const NavbarMenu = styled.div`
   display: none;
 
   svg {
-    fill: ${props => props.theme.blueCool6};
+    fill: var(--blueCool6);
   }
 `;
 
@@ -58,13 +58,13 @@ const NavbarLinkContainer = styled.ul`
     .link {
       &,
       &:visited {
-        color: ${props => props.theme.blueCool10};
+        color: var(--blueCool10);
         transition: all 0.4s;
       }
 
       &:hover,
       &:active {
-        color: ${props => props.theme.redDark};
+        color: var(--redDark);
       }
     }
   }

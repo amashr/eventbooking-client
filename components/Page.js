@@ -1,17 +1,8 @@
 import React, { Component } from 'react';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 import Meta from './Meta';
 import Navbar from './Navbar';
-
-const theme = {
-  blueCool3: '#3E4C59',
-  blueCool6: '#7B8794',
-  blueCool9: '#E4E7EB',
-  blueCool10: '#F5F7FA',
-  redDark: '#CF1124',
-  red: '#EF4E4E'
-};
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -33,6 +24,15 @@ const GlobalStyle = createGlobalStyle`
     font-weight: bold;
     font-style: normal;
   }
+
+  :root {
+    --blueCool3: #3E4C59;
+    --blueCool6: #7B8794;
+    --blueCool9: #E4E7EB;
+    --blueCool10: #F5F7FA;
+    --redDark: #CF1124;
+    --red: #EF4E4E;
+  }
   
   *, *::before, *::after {
     box-sizing: inherit;
@@ -48,8 +48,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: Enrique, 'sans-serif';
     font-weight: 400;
-    color: ${props => props.theme.blueCool3};
-    background: ${props => props.theme.blueCool10};
+    color: var(--blueCool3);
+    background: var(--blueCool10);
     text-rendering: optimizeLegibility;
     letter-spacing: 1.2px;
     font-size: 1.6rem;
@@ -58,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     font-weight: bold;
-    color: ${props => props.theme.blueCool3}
+    color: var(--blueCool3);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -69,15 +69,13 @@ const GlobalStyle = createGlobalStyle`
 class Page extends Component {
   render() {
     return (
-      <ThemeProvider theme={theme}>
-        <>
-          <Meta />
-          <GlobalStyle />
-          <Navbar />
-          {this.props.children}
-          <p>Footer Goes here</p>
-        </>
-      </ThemeProvider>
+      <>
+        <Meta />
+        <GlobalStyle />
+        <Navbar />
+        {this.props.children}
+        <p>Footer Goes here</p>
+      </>
     );
   }
 }

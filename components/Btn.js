@@ -4,8 +4,8 @@ import Link from 'next/link';
 const StyledBtn = styled.a`
   &,
   &:visited {
-    border: 0.2rem solid ${props => props.theme.red};
-    color: ${props => props.theme.red};
+    border: 0.2rem solid var(--red);
+    color: var(--red);
     border-radius: 0.4rem;
     padding: 1.2rem 3rem;
     cursor: pointer;
@@ -20,9 +20,9 @@ const StyledBtn = styled.a`
 
   &:hover,
   &:active {
-    color: ${props => props.theme.blueCool10};
-    border-color: ${props => props.theme.redDark};
-    background: ${props => props.theme.redDark};
+    color: var(--blueCool10);
+    border-color: var(--redDark);
+    background: var(--redDark);
   }
 `;
 

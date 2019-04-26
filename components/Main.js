@@ -9,7 +9,7 @@ const StyledMain = styled.main`
   background-position-y: -0.2rem;
   height: 40rem;
   padding-top: 10rem;
-  color: ${props => props.theme.blueCool10};
+  color: var(--blueCool10);
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -33,8 +33,8 @@ const StyledForm = styled.div`
   input {
     font-family: inherit;
     font-size: 3rem;
-    color: ${props => props.theme.blueCool3};
-    background: ${props => props.theme.blueCool10};
+    color: var(--blueCool3);
+    background: var(--blueCool10);
     border: none;
     border-radius: 0.4rem;
     box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.3);
@@ -45,23 +45,23 @@ const StyledForm = styled.div`
 
     &:focus {
       outline: none;
-      background: ${props => props.theme.blueCool9};
+      background: var(--blueCool9);
       width: 100%;
     }
 
     &::placeholder {
-      color: ${props => props.theme.blueCool6};
+      color: var(--blueCool6);
     }
 
     &:focus + button {
-      background: ${props => props.theme.blueCool9};
+      background: var(--blueCool9);
     }
   }
 `;
 
 const ButtonIcon = styled.button`
   border: none;
-  background: ${props => props.theme.blueCool10};
+  background: var(--blueCool10);
   cursor: pointer;
 
   &:focus {
@@ -69,7 +69,7 @@ const ButtonIcon = styled.button`
   }
 
   svg {
-    fill: ${props => props.theme.blueCool3};
+    fill: var(--blueCool3);
   }
 `;
 
