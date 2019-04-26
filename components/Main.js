@@ -62,6 +62,7 @@ const StyledForm = styled.div`
 const ButtonIcon = styled.button`
   border: none;
   background: ${props => props.theme.blueCool10};
+  cursor: pointer;
 
   &:focus {
     outline: none;
