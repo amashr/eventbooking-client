@@ -34,6 +34,11 @@ const GlobalStyle = createGlobalStyle`
     --red: #EF4E4E;
 
     --transition: all .4s;
+
+    --tabport:  37.5em; /* 600px */
+    --tabland:  56.25em; /* 900px */
+    --desktop:  75em; /* 1200px */
+    --bigdesktop:  112.5em; /* 1800px */
   }
   
   *, *::before, *::after {
