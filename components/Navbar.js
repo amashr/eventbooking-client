@@ -9,6 +9,7 @@ const StyledNavbar = styled.nav`
   top: 0;
   width: 100%;
   padding: 2rem 6rem;
+
   display: flex;
   align-items: center;
 `;
@@ -26,6 +27,16 @@ const Logo = styled.div`
     &:active {
       color: ${props => props.theme.redDark};
     }
+  }
+`;
+
+const NavbarMenu = styled.div`
+  margin-left: auto;
+  cursor: pointer;
+  display: none;
+
+  svg {
+    fill: ${props => props.theme.blueCool6};
   }
 `;
 
@@ -70,6 +81,17 @@ const Navbar = () => (
         <a>Event Booking</a>
       </Link>
     </Logo>
+
+    <NavbarMenu>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+      </svg>
+    </NavbarMenu>
 
     <NavbarItem>
       <NavbarLinkContainer>
