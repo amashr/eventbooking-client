@@ -9,7 +9,8 @@ const theme = {
   blueCool6: '#7B8794',
   blueCool9: '#E4E7EB',
   blueCool10: '#F5F7FA',
-  red: '#CF1124'
+  redDark: '#CF1124',
+  red: '#EF4E4E'
 };
 
 const GlobalStyle = createGlobalStyle`
