@@ -15,13 +15,14 @@ const StyledBtn = styled.a`
     font-size: 1.25rem;
     display: flex;
     align-items: center;
-    transition: all 0.2s;
+    transition: all 0.4s;
   }
 
   &:hover,
   &:active {
     color: ${props => props.theme.blueCool10};
-    background: ${props => props.theme.red};
+    border-color: ${props => props.theme.redDark};
+    background: ${props => props.theme.redDark};
   }
 `;
 

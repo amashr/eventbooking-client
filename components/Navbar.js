@@ -17,7 +17,15 @@ const Logo = styled.div`
   font-size: 2.4rem;
 
   a {
-    color: ${props => props.theme.red};
+    &,
+    &:visited {
+      color: ${props => props.theme.red};
+    }
+
+    &:hover,
+    &:active {
+      color: ${props => props.theme.redDark};
+    }
   }
 `;
 
@@ -40,12 +48,12 @@ const NavbarLinkContainer = styled.ul`
       &,
       &:visited {
         color: ${props => props.theme.blueCool10};
-        transition: all 0.2s;
+        transition: all 0.4s;
       }
 
       &:hover,
       &:active {
-        color: ${props => props.theme.red};
+        color: ${props => props.theme.redDark};
       }
     }
   }
