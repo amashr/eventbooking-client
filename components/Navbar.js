@@ -63,7 +63,7 @@ const NavbarMenu = styled.div`
     fill: var(--blueCool6);
   }
 
-  @media only screen and (min-width: ${props => props.theme.tabland}) {
+  @media only screen and (min-width: ${props => props.theme.desktop}) {
     & {
       display: none;
     }
@@ -73,7 +73,7 @@ const NavbarMenu = styled.div`
 const NavbarItem = styled.div`
   display: none;
 
-  @media only screen and (min-width: ${props => props.theme.tabland}) {
+  @media only screen and (min-width: ${props => props.theme.desktop}) {
     & {
       flex: 1;
       margin-left: 6rem;
