@@ -8,14 +8,26 @@ const StyledNavbar = styled.nav`
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 2rem 6rem;
+  padding: 1rem;
 
   display: flex;
   align-items: center;
+
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      padding: 2rem 6rem;
+    }
+  }
 `;
 
 const Logo = styled.div`
-  font-size: 2.4rem;
+  font-size: 2rem;
+
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      font-size: 2.4rem;
+    }
+  }
 
   a {
     &,
