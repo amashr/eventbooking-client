@@ -8,20 +8,33 @@ const StyledMain = styled.main`
   background-size: cover;
   background-position-y: -0.2rem;
   height: 40rem;
-  padding-top: 10rem;
+  padding: 10rem 1rem 0;
   color: var(--blueCool10);
   display: flex;
   justify-content: center;
   align-items: flex-start;
+
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      padding: 10rem 0 0;
+    }
+  }
 `;
 
 const StyledMainWrapper = styled.div`
-  width: 100rem;
+  max-width: 100rem;
 
   h1 {
-    font-size: 4.4rem;
-    margin-right: 20rem;
+    font-size: 3.4rem;
     margin-bottom: 5rem;
+
+    @media only screen and (min-width: ${props => props.theme.tabport}) {
+      & {
+        font-size: 4.4rem;
+        margin-right: 20rem;
+        margin-bottom: 5rem;
+      }
+    }
   }
 `;
 
