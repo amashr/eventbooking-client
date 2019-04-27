@@ -12,26 +12,6 @@ const theme = {
 };
 
 const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'Enrique';
-    src: url('/static/fonts/EnriqueRegular.woff2') format('woff2'),
-       url('/static/fonts/EnriqueRegular.woff') format('woff'),
-       url('/static/fonts/EnriqueRegular.ttf')  format('truetype'),
-       url('/static/fonts/EnriqueRegular.svg#EnriqueRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Enrique';
-    src: url('/static/fonts/EnriqueBold.woff2') format('woff2'),
-       url('/static/fonts/EnriqueBold.woff') format('woff'),
-       url('/static/fonts/EnriqueBold.ttf')  format('truetype'),
-       url('/static/fonts/EnriqueBold.svg#EnriqueBold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-  }
-
   :root {
     --blueCool3: #3E4C59;
     --blueCool6: #7B8794;
@@ -55,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-family: Enrique, 'sans-serif';
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     color: var(--blueCool3);
     background: var(--blueCool10);
@@ -66,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     color: var(--blueCool3);
   }
 

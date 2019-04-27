@@ -12,7 +12,7 @@ const StyledBtn = styled.a`
     background: transparent;
     text-transform: uppercase;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     display: flex;
     align-items: center;
     transition: var(--transition);

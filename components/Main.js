@@ -19,8 +19,7 @@ const StyledMainWrapper = styled.div`
   width: 100rem;
 
   h1 {
-    font-size: 50px;
-    font-weight: bold;
+    font-size: 4.4rem;
     margin-right: 20rem;
     margin-bottom: 5rem;
   }
@@ -32,7 +31,7 @@ const StyledForm = styled.div`
 
   input {
     font-family: inherit;
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--blueCool3);
     background: var(--blueCool10);
     border: none;
