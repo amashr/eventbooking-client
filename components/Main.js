@@ -8,15 +8,15 @@ const StyledMain = styled.main`
   background-size: cover;
   background-position-y: -0.2rem;
   height: 40rem;
-  padding: 10rem 1rem 0;
+  padding: 0 1rem;
   color: var(--blueCool10);
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 
   @media only screen and (min-width: ${props => props.theme.tabport}) {
     & {
-      padding: 10rem 2rem 0;
+      padding: 0 2rem;
     }
   }
 
