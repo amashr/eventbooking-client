@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -110,66 +111,133 @@ const NavbarLinkContainer = styled.ul`
   }
 `;
 
-const Navbar = () => (
-  <StyledNavbar>
-    <Logo>
-      <Link href="/">
-        <a>Event Booking</a>
-      </Link>
-    </Logo>
-
-    <NavbarMenu>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-      >
-        <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
-      </svg>
-    </NavbarMenu>
-
-    <NavbarItem>
-      <NavbarLinkContainer>
-        <li>
-          <Link href="/concerts">
-            <a className="link">Concerts</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/sports">
-            <a className="link">Sports</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/arts">
-            <a className="link">Arts &amp; Theater</a>
-          </Link>
-        </li>
-        <li>
+class Navbar extends Component {
+  state = { isScroll: false };
+  render() {
+    return (
+      <StyledNavbar>
+        <Logo>
           <Link href="/">
-            <a className="link">For You</a>
+            <a>Event Booking</a>
           </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a className="link">More</a>
-          </Link>
-        </li>
-      </NavbarLinkContainer>
+        </Logo>
 
-      <NavbarLinkContainer>
-        <li>
-          <Link href="/login">
-            <a className="link">Sign In</a>
-          </Link>
-        </li>
-        <li>
-          <Btn path="/">Get Started</Btn>
-        </li>
-      </NavbarLinkContainer>
-    </NavbarItem>
-  </StyledNavbar>
-);
+        <NavbarMenu>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+          </svg>
+        </NavbarMenu>
+
+        <NavbarItem>
+          <NavbarLinkContainer>
+            <li>
+              <Link href="/concerts">
+                <a className="link">Concerts</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/sports">
+                <a className="link">Sports</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/arts">
+                <a className="link">Arts &amp; Theater</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                <a className="link">For You</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                <a className="link">More</a>
+              </Link>
+            </li>
+          </NavbarLinkContainer>
+
+          <NavbarLinkContainer>
+            <li>
+              <Link href="/login">
+                <a className="link">Sign In</a>
+              </Link>
+            </li>
+            <li>
+              <Btn path="/">Get Started</Btn>
+            </li>
+          </NavbarLinkContainer>
+        </NavbarItem>
+      </StyledNavbar>
+    );
+  }
+}
+
+// const Navbar = () => (
+//   <StyledNavbar>
+//     <Logo>
+//       <Link href="/">
+//         <a>Event Booking</a>
+//       </Link>
+//     </Logo>
+
+//     <NavbarMenu>
+//       <svg
+//         xmlns="http://www.w3.org/2000/svg"
+//         width="24"
+//         height="24"
+//         viewBox="0 0 24 24"
+//       >
+//         <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+//       </svg>
+//     </NavbarMenu>
+
+//     <NavbarItem>
+//       <NavbarLinkContainer>
+//         <li>
+//           <Link href="/concerts">
+//             <a className="link">Concerts</a>
+//           </Link>
+//         </li>
+//         <li>
+//           <Link href="/sports">
+//             <a className="link">Sports</a>
+//           </Link>
+//         </li>
+//         <li>
+//           <Link href="/arts">
+//             <a className="link">Arts &amp; Theater</a>
+//           </Link>
+//         </li>
+//         <li>
+//           <Link href="/">
+//             <a className="link">For You</a>
+//           </Link>
+//         </li>
+//         <li>
+//           <Link href="/">
+//             <a className="link">More</a>
+//           </Link>
+//         </li>
+//       </NavbarLinkContainer>
+
+//       <NavbarLinkContainer>
+//         <li>
+//           <Link href="/login">
+//             <a className="link">Sign In</a>
+//           </Link>
+//         </li>
+//         <li>
+//           <Btn path="/">Get Started</Btn>
+//         </li>
+//       </NavbarLinkContainer>
+//     </NavbarItem>
+//   </StyledNavbar>
+// );
 
 export default Navbar;
