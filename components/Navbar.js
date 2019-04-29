@@ -1,32 +1,91 @@
+import React, { Component } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
 import Btn from './Btn';
 
 const StyledNavbar = styled.nav`
-  background: transparent;
-  position: absolute;
+  background: ${props =>
+    props.isScroll ? 'var(--blueCool10)' : 'transparent'};
+  position: fixed;
   top: 0;
   width: 100%;
-  padding: 2rem 6rem;
+  padding: 1rem;
+  box-shadow: ${props => (props.isScroll ? 'var(--box-shadow)' : 'none')};
+  transition: var(--transition);
+
   display: flex;
   align-items: center;
+
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      padding: ${props => (props.isScroll ? '1rem 2rem' : '1.5rem 2rem')};
+    }
+  }
+
+  @media only screen and (min-width: ${props => props.theme.tabland}) {
+    & {
+      padding: ${props => (props.isScroll ? '1.5rem 3rem' : '2rem 3rem')};
+    }
+  }
+
+  @media only screen and (min-width: ${props => props.theme.desktop}) {
+    & {
+      padding: ${props => (props.isScroll ? '1.5rem 6rem' : '2rem 6rem')};
+    }
+  }
 `;
 
 const Logo = styled.div`
-  font-size: 2.4rem;
+  font-size: 2rem;
+
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      font-size: 2.4rem;
+    }
+  }
 
   a {
-    color: ${props => props.theme.red};
+    &,
+    &:visited {
+      color: var(--red);
+      transition: var(--transition);
+    }
+
+    &:hover,
+    &:active {
+      color: var(--redDark);
+    }
+  }
+`;
+
+const NavbarMenu = styled.div`
+  margin-left: auto;
+  cursor: pointer;
+
+  svg {
+    fill: var(--blueCool6);
+  }
+
+  @media only screen and (min-width: ${props => props.theme.desktop}) {
+    & {
+      display: none;
+    }
   }
 `;
 
 const NavbarItem = styled.div`
-  flex: 1;
-  margin-left: 6rem;
+  display: none;
 
-  display: flex;
-  justify-content: space-between;
+  @media only screen and (min-width: ${props => props.theme.desktop}) {
+    & {
+      flex: 1;
+      margin-left: 6rem;
+
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 `;
 
 const NavbarLinkContainer = styled.ul`
@@ -37,7 +96,17 @@ const NavbarLinkContainer = styled.ul`
 
   li {
     .link {
-      color: ${props => props.theme.blueCool10};
+      &,
+      &:visited {
+        color: ${props =>
+          props.isScroll ? 'var(--blueCool3)' : 'var(--blueCool10)'};
+        transition: var(--transition);
+      }
+
+      &:hover,
+      &:active {
+        color: var(--redDark);
+      }
     }
   }
 
@@ -46,16 +115,27 @@ const NavbarLinkContainer = styled.ul`
   }
 `;
 
-const Navbar = () => (
-  <StyledNavbar>
+const Navbar = props => (
+  <StyledNavbar isScroll={props.isScroll}>
     <Logo>
       <Link href="/">
         <a>Event Booking</a>
       </Link>
     </Logo>
 
+    <NavbarMenu>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+      </svg>
+    </NavbarMenu>
+
     <NavbarItem>
-      <NavbarLinkContainer>
+      <NavbarLinkContainer isScroll={props.isScroll}>
         <li>
           <Link href="/concerts">
             <a className="link">Concerts</a>
@@ -83,7 +163,7 @@ const Navbar = () => (
         </li>
       </NavbarLinkContainer>
 
-      <NavbarLinkContainer>
+      <NavbarLinkContainer isScroll={props.isScroll}>
         <li>
           <Link href="/login">
             <a className="link">Sign In</a>
