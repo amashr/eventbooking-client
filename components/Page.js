@@ -67,7 +67,7 @@ class Page extends Component {
     window.addEventListener('scroll', this.handleScroll);
   }
 
-  handleScroll = event => {
+  handleScroll = () => {
     const scrollTop = window.pageYOffset;
     if (this._isMounted) {
       if (scrollTop > 100) {
