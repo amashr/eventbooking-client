@@ -19,19 +19,19 @@ const StyledNavbar = styled.nav`
 
   @media only screen and (min-width: ${props => props.theme.tabport}) {
     & {
-      padding: 1.5rem 2rem;
+      padding: ${props => (props.isScroll ? '1rem 2rem' : '1.5rem 2rem')};
     }
   }
 
   @media only screen and (min-width: ${props => props.theme.tabland}) {
     & {
-      padding: 2rem 3rem;
+      padding: ${props => (props.isScroll ? '1.5rem 3rem' : '2rem 3rem')};
     }
   }
 
   @media only screen and (min-width: ${props => props.theme.desktop}) {
     & {
-      padding: 2rem 6rem;
+      padding: ${props => (props.isScroll ? '1.5rem 6rem' : '2rem 6rem')};
     }
   }
 `;
