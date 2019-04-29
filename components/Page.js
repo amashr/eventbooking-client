@@ -5,32 +5,24 @@ import Meta from './Meta';
 import Navbar from './Navbar';
 
 const theme = {
-  blueCool3: '#3E4C59',
-  blueCool6: '#7B8794',
-  blueCool9: '#E4E7EB',
-  blueCool10: '#F5F7FA',
-  red: '#CF1124'
+  tabport: '37.5em', // 600px
+  tabland: '56.25em', // 900px
+  desktop: '75em', // 1200px
+  bigdesktop: '112.5em' // 1800px
 };
 
 const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'Enrique';
-    src: url('/static/fonts/EnriqueRegular.woff2') format('woff2'),
-       url('/static/fonts/EnriqueRegular.woff') format('woff'),
-       url('/static/fonts/EnriqueRegular.ttf')  format('truetype'),
-       url('/static/fonts/EnriqueRegular.svg#EnriqueRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
+  :root {
+    --blueCool3: #3E4C59;
+    --blueCool6: #7B8794;
+    --blueCool9: #E4E7EB;
+    --blueCool10: #F5F7FA;
+    --redDark: #CF1124;
+    --red: #EF4E4E;
 
-  @font-face {
-    font-family: 'Enrique';
-    src: url('/static/fonts/EnriqueBold.woff2') format('woff2'),
-       url('/static/fonts/EnriqueBold.woff') format('woff'),
-       url('/static/fonts/EnriqueBold.ttf')  format('truetype'),
-       url('/static/fonts/EnriqueBold.svg#EnriqueBold') format('svg');
-    font-weight: bold;
-    font-style: normal;
+    --transition: all .4s;
+
+    --box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.3);
   }
   
   *, *::before, *::after {
@@ -45,10 +37,10 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-family: Enrique, 'sans-serif';
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    color: ${props => props.theme.blueCool3};
-    background: ${props => props.theme.blueCool10};
+    color: var(--blueCool3);
+    background: var(--blueCool10);
     text-rendering: optimizeLegibility;
     letter-spacing: 1.2px;
     font-size: 1.6rem;
@@ -56,8 +48,8 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    font-weight: bold;
-    color: ${props => props.theme.blueCool3}
+    font-weight: 500;
+    color: var(--blueCool3);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -66,13 +58,36 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 class Page extends Component {
+  _isMounted = false;
+  state = { isScroll: false };
+
+  componentDidMount() {
+    this._isMounted = true;
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = () => {
+    const scrollTop = window.pageYOffset;
+    if (this._isMounted) {
+      if (scrollTop > 100) {
+        this.setState({ isScroll: true });
+      } else {
+        this.setState({ isScroll: false });
+      }
+    }
+  };
+
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
+
   render() {
     return (
       <ThemeProvider theme={theme}>
         <>
           <Meta />
           <GlobalStyle />
-          <Navbar />
+          <Navbar isScroll={this.state.isScroll} />
           {this.props.children}
           <p>Footer Goes here</p>
         </>
