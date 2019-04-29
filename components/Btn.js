@@ -4,24 +4,25 @@ import Link from 'next/link';
 const StyledBtn = styled.a`
   &,
   &:visited {
-    border: 0.2rem solid ${props => props.theme.red};
-    color: ${props => props.theme.red};
+    border: 0.2rem solid var(--red);
+    color: var(--red);
     border-radius: 0.4rem;
     padding: 1.2rem 3rem;
     cursor: pointer;
     background: transparent;
     text-transform: uppercase;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     display: flex;
     align-items: center;
-    transition: all 0.2s;
+    transition: var(--transition);
   }
 
   &:hover,
   &:active {
-    color: ${props => props.theme.blueCool10};
-    background: ${props => props.theme.red};
+    color: var(--blueCool10);
+    border-color: var(--redDark);
+    background: var(--redDark);
   }
 `;
 

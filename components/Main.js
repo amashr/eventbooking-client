@@ -8,21 +8,50 @@ const StyledMain = styled.main`
   background-size: cover;
   background-position-y: -0.2rem;
   height: 40rem;
-  padding-top: 10rem;
-  color: ${props => props.theme.blueCool10};
+  padding: 0 1rem;
+  color: var(--blueCool10);
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      padding: 0 2rem;
+    }
+  }
+
+  @media only screen and (min-width: ${props => props.theme.tabland}) {
+    & {
+      padding: 3.5rem 3rem 0;
+    }
+  }
+
+  @media only screen and (min-width: ${props => props.theme.desktop}) {
+    & {
+      padding: 10rem 0 0;
+    }
+  }
 `;
 
 const StyledMainWrapper = styled.div`
-  width: 100rem;
+  max-width: 100rem;
 
   h1 {
-    font-size: 50px;
-    font-weight: bold;
-    margin-right: 20rem;
+    font-size: 3.4rem;
     margin-bottom: 5rem;
+
+    @media only screen and (min-width: ${props => props.theme.tabport}) {
+      & {
+        font-size: 4rem;
+      }
+    }
+
+    @media only screen and (min-width: ${props => props.theme.tabland}) {
+      & {
+        font-size: 4.4rem;
+        margin-right: 15.2rem;
+      }
+    }
   }
 `;
 
@@ -32,43 +61,61 @@ const StyledForm = styled.div`
 
   input {
     font-family: inherit;
-    font-size: 3rem;
-    color: ${props => props.theme.blueCool3};
-    background: ${props => props.theme.blueCool10};
+    font-size: 1.8rem;
+    color: var(--blueCool3);
+    background: var(--blueCool10);
     border: none;
     border-radius: 0.4rem;
-    box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.3);
-    width: 60%;
-    padding: 2rem;
-    margin-right: -5rem;
-    transition: all 0.2s;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    padding: 1.5rem;
+    margin-right: -4.5rem;
+    transition: var(--transition);
+
+    @media only screen and (min-width: ${props => props.theme.tabport}) {
+      & {
+        font-size: 1.7rem;
+        padding: 1.7rem;
+        margin-right: -4.7rem;
+      }
+    }
+
+    @media only screen and (min-width: ${props => props.theme.tabland}) {
+      & {
+        width: 60%;
+        font-size: 2rem;
+        padding: 2rem;
+        margin-right: -5rem;
+      }
+    }
 
     &:focus {
       outline: none;
-      background: ${props => props.theme.blueCool9};
+      background: var(--blueCool9);
       width: 100%;
     }
 
     &::placeholder {
-      color: ${props => props.theme.blueCool6};
+      color: var(--blueCool6);
     }
 
     &:focus + button {
-      background: ${props => props.theme.blueCool9};
+      background: var(--blueCool9);
     }
   }
 `;
 
 const ButtonIcon = styled.button`
   border: none;
-  background: ${props => props.theme.blueCool10};
+  background: var(--blueCool10);
+  cursor: pointer;
 
   &:focus {
     outline: none;
   }
 
   svg {
-    fill: ${props => props.theme.blueCool3};
+    fill: var(--blueCool3);
   }
 `;
 
