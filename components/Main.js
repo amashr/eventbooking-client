@@ -70,6 +70,14 @@ const StyledForm = styled.div`
 
     @media only screen and (min-width: ${props => props.theme.tabport}) {
       & {
+        font-size: 1.7rem;
+        padding: 1.7rem;
+        margin-right: -4.7rem;
+      }
+    }
+
+    @media only screen and (min-width: ${props => props.theme.tabland}) {
+      & {
         width: 60%;
         font-size: 2rem;
         padding: 2rem;
