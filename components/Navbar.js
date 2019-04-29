@@ -11,6 +11,7 @@ const StyledNavbar = styled.nav`
   top: 0;
   width: 100%;
   padding: 1rem;
+  box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.3);
 
   display: flex;
   align-items: center;
