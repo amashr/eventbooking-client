@@ -21,6 +21,8 @@ const GlobalStyle = createGlobalStyle`
     --red: #EF4E4E;
 
     --transition: all .4s;
+
+    --box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.3);
   }
   
   *, *::before, *::after {
@@ -57,13 +59,36 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 class Page extends Component {
+  _isMounted = false;
+  state = { isScroll: false };
+
+  componentDidMount() {
+    this._isMounted = true;
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = event => {
+    const scrollTop = window.pageYOffset;
+    if (this._isMounted) {
+      if (scrollTop > 50) {
+        this.setState({ isScroll: true });
+      } else {
+        this.setState({ isScroll: false });
+      }
+    }
+  };
+
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
+
   render() {
     return (
       <ThemeProvider theme={theme}>
         <>
           <Meta />
           <GlobalStyle />
-          <Navbar />
+          <Navbar isScroll={this.state.isScroll} />
           {this.props.children}
           <p>Footer Goes here</p>
         </>

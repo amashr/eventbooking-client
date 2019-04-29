@@ -66,7 +66,7 @@ const StyledForm = styled.div`
     background: var(--blueCool10);
     border: none;
     border-radius: 0.4rem;
-    box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow);
     width: 100%;
     padding: 1.5rem;
     margin-right: -4.5rem;

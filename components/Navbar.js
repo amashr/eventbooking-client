@@ -11,7 +11,8 @@ const StyledNavbar = styled.nav`
   top: 0;
   width: 100%;
   padding: 1rem;
-  box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.3);
+  box-shadow: ${props => (props.isScroll ? 'var(--box-shadow)' : 'none')};
+  transition: var(--transition);
 
   display: flex;
   align-items: center;
@@ -114,86 +115,66 @@ const NavbarLinkContainer = styled.ul`
   }
 `;
 
-class Navbar extends Component {
-  state = { isScroll: false };
+const Navbar = props => (
+  <StyledNavbar isScroll={props.isScroll}>
+    <Logo>
+      <Link href="/">
+        <a>Event Booking</a>
+      </Link>
+    </Logo>
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
+    <NavbarMenu>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+      </svg>
+    </NavbarMenu>
 
-  handleScroll = event => {
-    const scrollTop = window.pageYOffset;
-
-    if (scrollTop > 50) {
-      this.setState({ isScroll: true });
-    } else {
-      this.setState({ isScroll: false });
-    }
-  };
-
-  render() {
-    return (
-      <StyledNavbar isScroll={this.state.isScroll}>
-        <Logo>
-          <Link href="/">
-            <a>Event Booking</a>
+    <NavbarItem>
+      <NavbarLinkContainer isScroll={props.isScroll}>
+        <li>
+          <Link href="/concerts">
+            <a className="link">Concerts</a>
           </Link>
-        </Logo>
+        </li>
+        <li>
+          <Link href="/sports">
+            <a className="link">Sports</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/arts">
+            <a className="link">Arts &amp; Theater</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/">
+            <a className="link">For You</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/">
+            <a className="link">More</a>
+          </Link>
+        </li>
+      </NavbarLinkContainer>
 
-        <NavbarMenu>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
-          </svg>
-        </NavbarMenu>
-
-        <NavbarItem>
-          <NavbarLinkContainer isScroll={this.state.isScroll}>
-            <li>
-              <Link href="/concerts">
-                <a className="link">Concerts</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/sports">
-                <a className="link">Sports</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/arts">
-                <a className="link">Arts &amp; Theater</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a className="link">For You</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a className="link">More</a>
-              </Link>
-            </li>
-          </NavbarLinkContainer>
-
-          <NavbarLinkContainer isScroll={this.state.isScroll}>
-            <li>
-              <Link href="/login">
-                <a className="link">Sign In</a>
-              </Link>
-            </li>
-            <li>
-              <Btn path="/">Get Started</Btn>
-            </li>
-          </NavbarLinkContainer>
-        </NavbarItem>
-      </StyledNavbar>
-    );
-  }
-}
+      <NavbarLinkContainer isScroll={props.isScroll}>
+        <li>
+          <Link href="/login">
+            <a className="link">Sign In</a>
+          </Link>
+        </li>
+        <li>
+          <Btn path="/">Get Started</Btn>
+        </li>
+      </NavbarLinkContainer>
+    </NavbarItem>
+  </StyledNavbar>
+);
 
 export default Navbar;
