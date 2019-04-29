@@ -36,6 +36,13 @@ const StyledMainWrapper = styled.div`
 
     @media only screen and (min-width: ${props => props.theme.tabport}) {
       & {
+        font-size: 4rem;
+        margin-bottom: 5rem;
+      }
+    }
+
+    @media only screen and (min-width: ${props => props.theme.tabland}) {
+      & {
         font-size: 4.4rem;
         margin-right: 20rem;
         margin-bottom: 5rem;
