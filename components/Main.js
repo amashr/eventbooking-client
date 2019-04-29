@@ -16,6 +16,12 @@ const StyledMain = styled.main`
 
   @media only screen and (min-width: ${props => props.theme.tabport}) {
     & {
+      padding: 10rem 2rem 0;
+    }
+  }
+
+  @media only screen and (min-width: ${props => props.theme.tabland}) {
+    & {
       padding: 10rem 0 0;
     }
   }
