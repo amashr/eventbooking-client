@@ -44,16 +44,25 @@ const StyledForm = styled.div`
 
   input {
     font-family: inherit;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--blueCool3);
     background: var(--blueCool10);
     border: none;
     border-radius: 0.4rem;
     box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.3);
-    width: 60%;
-    padding: 2rem;
-    margin-right: -5rem;
+    width: 100%;
+    padding: 1.5rem;
+    margin-right: -4.5rem;
     transition: var(--transition);
+
+    @media only screen and (min-width: ${props => props.theme.tabport}) {
+      & {
+        width: 60%;
+        font-size: 2rem;
+        padding: 2rem;
+        margin-right: -5rem;
+      }
+    }
 
     &:focus {
       outline: none;
