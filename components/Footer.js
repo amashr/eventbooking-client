@@ -39,7 +39,7 @@ const LowerFooter = styled.div`
   justify-content: space-between;
 
   p {
-    color: var(--blueCool6);
+    color: rgba(0, 0, 0, 0.4);
   }
 `;
 
