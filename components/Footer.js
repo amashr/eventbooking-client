@@ -38,6 +38,14 @@ const LowerFooter = styled.div`
   }
 `;
 
+const PolicyFooter = styled.ul`
+  display: flex;
+
+  li:not(:last-child) {
+    margin-right: 1.3rem;
+  }
+`;
+
 const Footer = () => (
   <StyledFooter>
     <Wrapper>
@@ -202,7 +210,7 @@ const Footer = () => (
       <LowerFooter>
         <p>&copy; EventBooking 2019. All rights reserved.</p>
 
-        <ul>
+        <PolicyFooter>
           <li>
             <Link href="/">
               <a>Terms of Service</a>
@@ -218,7 +226,7 @@ const Footer = () => (
               <a>Others</a>
             </Link>
           </li>
-        </ul>
+        </PolicyFooter>
 
         <ul>
           <li>
