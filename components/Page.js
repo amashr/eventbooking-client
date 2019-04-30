@@ -3,6 +3,7 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import Meta from './Meta';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const theme = {
   tabport: '37.5em', // 600px
@@ -89,7 +90,7 @@ class Page extends Component {
           <GlobalStyle />
           <Navbar isScroll={this.state.isScroll} />
           {this.props.children}
-          <p>Footer Goes here</p>
+          <Footer />
         </>
       </ThemeProvider>
     );
