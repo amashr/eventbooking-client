@@ -24,6 +24,11 @@ const UpperFooter = styled.div`
 
   li {
     padding-bottom: 0.6rem;
+    transition: var(--transition);
+
+    a:hover {
+      color: var(--redDark);
+    }
   }
 `;
 
@@ -40,6 +45,14 @@ const LowerFooter = styled.div`
 
 const PolicyFooter = styled.ul`
   display: flex;
+
+  li {
+    transition: var(--transition);
+
+    a:hover {
+      color: var(--redDark);
+    }
+  }
 
   li:not(:last-child) {
     margin-right: 1.3rem;
