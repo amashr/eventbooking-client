@@ -59,6 +59,54 @@ const PolicyFooter = styled.ul`
   }
 `;
 
+const IconFooter = styled.ul`
+  display: flex;
+
+  li:not(:last-child) {
+    margin-right: 1.3rem;
+  }
+
+  .twitter {
+    fill: #55acee;
+    transition: var(--transition);
+
+    &:hover {
+      transform: scale(1.1);
+      fill: var(--redDark);
+    }
+  }
+
+  .facebook {
+    fill: #3b5999;
+    transition: var(--transition);
+
+    &:hover {
+      transform: scale(1.1);
+      fill: var(--redDark);
+    }
+  }
+
+  .instagram {
+    fill: #e4405f;
+    transition: var(--transition);
+
+    &:hover {
+      transform: scale(1.1);
+      fill: var(--redDark);
+    }
+  }
+
+  .youtube {
+    fill: #cd201f;
+    transition: var(--transition);
+
+    &:hover {
+      transform: scale(1.1);
+      fill: var(--redDark);
+    }
+  }
+`;
+
 const Footer = () => (
   <StyledFooter>
     <Wrapper>
@@ -241,11 +289,12 @@ const Footer = () => (
           </li>
         </PolicyFooter>
 
-        <ul>
+        <IconFooter>
           <li>
             <Link href="/">
               <a>
                 <svg
+                  className="twitter"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -260,6 +309,7 @@ const Footer = () => (
             <Link href="/">
               <a>
                 <svg
+                  className="facebook"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -274,6 +324,7 @@ const Footer = () => (
             <Link href="/">
               <a>
                 <svg
+                  className="instagram"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -288,6 +339,7 @@ const Footer = () => (
             <Link href="/">
               <a>
                 <svg
+                  className="youtube"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -298,7 +350,7 @@ const Footer = () => (
               </a>
             </Link>
           </li>
-        </ul>
+        </IconFooter>
       </LowerFooter>
     </Wrapper>
   </StyledFooter>
