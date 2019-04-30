@@ -1,15 +1,36 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 
+const StyledFooter = styled.footer`
+  font-size: 1.5rem;
+`;
+
 const Wrapper = styled.div`
   max-width: 100rem;
   margin: 0 auto;
 `;
 
+const UpperFooter = styled.div`
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--blueCool3);
+
+  display: flex;
+  justify-content: space-between;
+
+  h4 {
+    padding-bottom: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  li {
+    padding-bottom: 0.6rem;
+  }
+`;
+
 const Footer = () => (
-  <footer>
+  <StyledFooter>
     <Wrapper>
-      <div>
+      <UpperFooter>
         <ul>
           <h4>Helpful Links</h4>
           <li>
@@ -48,6 +69,7 @@ const Footer = () => (
             </Link>
           </li>
         </ul>
+
         <ul>
           <h4>Our Network</h4>
           <li>
@@ -86,6 +108,7 @@ const Footer = () => (
             </Link>
           </li>
         </ul>
+
         <ul>
           <h4>About Us</h4>
           <li>
@@ -124,6 +147,7 @@ const Footer = () => (
             </Link>
           </li>
         </ul>
+
         <ul>
           <h4>Friends &amp; Partners</h4>
           <li>
@@ -162,41 +186,55 @@ const Footer = () => (
             </Link>
           </li>
         </ul>
-      </div>
+      </UpperFooter>
 
       <div>
         <div>
           <p>&copy; EventBooking 2019. All rights reserved.</p>
           <ul>
             <li>
-              <Link href="/">Terms of Service</Link>
+              <Link href="/">
+                <a>Terms of Service</a>
+              </Link>
             </li>
             <li>
-              <Link href="/">Privacy &amp; Policy</Link>
+              <Link href="/">
+                <a>Privacy &amp; Policy</a>
+              </Link>
             </li>
             <li>
-              <Link href="/">Others</Link>
+              <Link href="/">
+                <a>Others</a>
+              </Link>
             </li>
           </ul>
           <ul>
             <li>
-              <Link href="/">Twitter icon</Link>
+              <Link href="/">
+                <a>Twitter icon</a>
+              </Link>
             </li>
             <li>
-              <Link href="/">Fb icon</Link>
+              <Link href="/">
+                <a>Fb icon</a>
+              </Link>
             </li>
             <li>
-              <Link href="/">Inst icon</Link>
+              <Link href="/">
+                <a>nst icon</a>
+              </Link>
             </li>
             <li>
-              <Link href="/">Youtube icon</Link>
+              <Link href="/">
+                <a>Youtube icon</a>
+              </Link>
             </li>
           </ul>
           <div />
         </div>
       </div>
     </Wrapper>
-  </footer>
+  </StyledFooter>
 );
 
 export default Footer;
