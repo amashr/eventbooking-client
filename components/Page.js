@@ -69,7 +69,7 @@ class Page extends Component {
   handleScroll = () => {
     const scrollTop = window.pageYOffset;
     if (this._isMounted) {
-      if (scrollTop > 100) {
+      if (scrollTop > 50) {
         this.setState({ isScroll: true });
       } else {
         this.setState({ isScroll: false });
