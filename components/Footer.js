@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 
 const UpperFooter = styled.div`
   padding: 6rem 0;
-  border-bottom: 1px solid var(--blueCool3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
   display: flex;
   justify-content: space-between;
