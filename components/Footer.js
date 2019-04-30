@@ -32,6 +32,10 @@ const LowerFooter = styled.div`
 
   display: flex;
   justify-content: space-between;
+
+  p {
+    color: var(--blueCool6);
+  }
 `;
 
 const Footer = () => (
