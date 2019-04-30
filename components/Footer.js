@@ -20,6 +20,7 @@ const UpperFooter = styled.div`
   h4 {
     padding-bottom: 1.2rem;
     text-transform: uppercase;
+    color: var(--blueCool6);
   }
 
   li {
