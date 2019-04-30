@@ -52,6 +52,10 @@ const GlobalStyle = createGlobalStyle`
     color: var(--blueCool3);
   }
 
+  ul {
+    list-style-type: none;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
   }
