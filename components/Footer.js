@@ -63,47 +63,37 @@ const IconFooter = styled.ul`
   display: flex;
 
   li:not(:last-child) {
-    margin-right: 1.3rem;
+    margin-right: 1rem;
+  }
+
+  .twitter,
+  .facebook,
+  .instagram,
+  .youtube {
+    width: 1.8rem;
+    height: 1.8rem;
+    transition: var(--transition);
+
+    &:hover {
+      transform: scale(1.2);
+      fill: var(--redDark);
+    }
   }
 
   .twitter {
     fill: #55acee;
-    transition: var(--transition);
-
-    &:hover {
-      transform: scale(1.1);
-      fill: var(--redDark);
-    }
   }
 
   .facebook {
     fill: #3b5999;
-    transition: var(--transition);
-
-    &:hover {
-      transform: scale(1.1);
-      fill: var(--redDark);
-    }
   }
 
   .instagram {
     fill: #e4405f;
-    transition: var(--transition);
-
-    &:hover {
-      transform: scale(1.1);
-      fill: var(--redDark);
-    }
   }
 
   .youtube {
     fill: #cd201f;
-    transition: var(--transition);
-
-    &:hover {
-      transform: scale(1.1);
-      fill: var(--redDark);
-    }
   }
 `;
 
