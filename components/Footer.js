@@ -1,8 +1,14 @@
 import Link from 'next/link';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  max-width: 100rem;
+  margin: 0 auto;
+`;
 
 const Footer = () => (
   <footer>
-    <div>
+    <Wrapper>
       <div>
         <ul>
           <h4>Helpful Links</h4>
@@ -189,7 +195,7 @@ const Footer = () => (
           <div />
         </div>
       </div>
-    </div>
+    </Wrapper>
   </footer>
 );
 
