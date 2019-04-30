@@ -27,6 +27,13 @@ const UpperFooter = styled.div`
   }
 `;
 
+const LowerFooter = styled.div`
+  padding: 3rem 0 10rem;
+
+  display: flex;
+  justify-content: space-between;
+`;
+
 const Footer = () => (
   <StyledFooter>
     <Wrapper>
@@ -188,51 +195,50 @@ const Footer = () => (
         </ul>
       </UpperFooter>
 
-      <div>
-        <div>
-          <p>&copy; EventBooking 2019. All rights reserved.</p>
-          <ul>
-            <li>
-              <Link href="/">
-                <a>Terms of Service</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>Privacy &amp; Policy</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>Others</a>
-              </Link>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <Link href="/">
-                <a>Twitter icon</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>Fb icon</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>nst icon</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>Youtube icon</a>
-              </Link>
-            </li>
-          </ul>
-          <div />
-        </div>
-      </div>
+      <LowerFooter>
+        <p>&copy; EventBooking 2019. All rights reserved.</p>
+
+        <ul>
+          <li>
+            <Link href="/">
+              <a>Terms of Service</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a>Privacy &amp; Policy</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a>Others</a>
+            </Link>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <Link href="/">
+              <a>Twitter icon</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a>Fb icon</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a>nst icon</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a>Youtube icon</a>
+            </Link>
+          </li>
+        </ul>
+      </LowerFooter>
     </Wrapper>
   </StyledFooter>
 );
