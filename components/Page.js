@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: 400;
     color: var(--blueCool3);
     background: var(--blueCool10);
@@ -49,7 +49,6 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    font-weight: 500;
     color: var(--blueCool3);
   }
 
