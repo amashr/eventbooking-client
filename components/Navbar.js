@@ -119,7 +119,7 @@ const Navbar = props => (
   <StyledNavbar isScroll={props.isScroll}>
     <Logo>
       <Link href="/">
-        <a>Event Booking</a>
+        <a>EventBooking</a>
       </Link>
     </Logo>
 
