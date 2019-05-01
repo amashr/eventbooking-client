@@ -3,11 +3,23 @@ import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
   font-size: 1.5rem;
+
+  @media only screen and (min-width: ${props => props.theme.bigdesktop}) {
+    & {
+      font-size: 1.8rem;
+    }
+  }
 `;
 
 const Wrapper = styled.div`
   max-width: 100rem;
   margin: 0 auto;
+
+  @media only screen and (min-width: ${props => props.theme.bigdesktop}) {
+    & {
+      max-width: 80%;
+    }
+  }
 `;
 
 const UpperFooter = styled.div`
