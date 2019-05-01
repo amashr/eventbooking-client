@@ -21,9 +21,11 @@ const Wrapper = styled.div`
     line-height: 1;
     text-align: center;
     padding-bottom: 1rem;
+
+    flex-basis: 100%;
   }
 
-  @media only screen and (min-width: ${props => props.theme.tabport}) {
+  @media only screen and (min-width: ${props => props.theme.tabland}) {
     & {
       padding: 2rem 0;
       justify-content: space-between;
@@ -32,6 +34,8 @@ const Wrapper = styled.div`
         font-size: 6rem;
         text-align: left;
         padding-bottom: 0;
+
+        flex-basis: auto;
       }
     }
   }
