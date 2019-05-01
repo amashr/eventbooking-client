@@ -9,19 +9,35 @@ const StyledEventBanner = styled.section`
 const Wrapper = styled.div`
   max-width: 78rem;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
   h4 {
-    font-size: 6rem;
+    font-size: 3rem;
     line-height: 1;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      padding: 2rem 0;
+      justify-content: space-between;
+
+      h4 {
+        font-size: 6rem;
+        text-align: left;
+        padding-bottom: 0;
+      }
+    }
   }
 
   .learn {
-    font-size: 20px;
+    font-size: 1.6rem;
 
     display: flex;
     align-items: center;
@@ -31,17 +47,23 @@ const Wrapper = styled.div`
       color: var(--blueCool10);
 
       svg {
-        transform: translateX(5px);
+        transform: translateX(0.5rem);
         fill: var(--blueCool10);
       }
     }
 
     svg {
-      padding-left: 10px;
-      width: 30px;
-      height: 30px;
+      padding-left: 1rem;
+      width: 3rem;
+      height: 3rem;
       fill: var(--blueCool3);
       transition: var(--transition);
+    }
+
+    @media only screen and (min-width: ${props => props.theme.tabport}) {
+      & {
+        font-size: 2rem;
+      }
     }
   }
 `;
