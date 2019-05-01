@@ -11,11 +11,17 @@ const Wrapper = styled.div`
 `;
 
 const UpperFooter = styled.div`
-  padding: 6rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  display: none;
 
-  display: flex;
-  justify-content: space-between;
+  @media only screen and (min-width: ${props => props.theme.tabland}) {
+    & {
+      padding: 6rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 
   h4 {
     padding-bottom: 1.2rem;
