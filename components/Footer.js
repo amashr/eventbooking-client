@@ -48,8 +48,14 @@ const LowerFooter = styled.div`
 
   @media only screen and (min-width: ${props => props.theme.tabland}) {
     & {
-      padding: 3rem 0 10rem;
+      padding: 3rem 3rem 7rem;
       justify-content: space-between;
+    }
+  }
+
+  @media only screen and (min-width: ${props => props.theme.desktop}) {
+    & {
+      padding: 3rem 0 10rem;
     }
   }
 
