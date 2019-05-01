@@ -156,6 +156,13 @@ const IconFooter = styled.ul`
     height: 1.8rem;
     transition: var(--transition);
 
+    @media only screen and (min-width: ${props => props.theme.bigdesktop}) {
+      & {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+
     &:hover {
       transform: scale(1.2);
       fill: var(--redDark);
