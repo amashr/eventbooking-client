@@ -46,6 +46,12 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 1.2px;
     font-size: 1.6rem;
     position: relative;
+
+    @media only screen and (min-width: ${props => props.theme.bigdesktop}) {
+      & {
+        font-size: 2rem;
+      }
+    }
   }
 
   a {
