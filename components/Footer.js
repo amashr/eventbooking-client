@@ -46,7 +46,7 @@ const LowerFooter = styled.div`
   justify-content: center;
   flex-wrap: wrap;
 
-  @media only screen and (min-width: ${props => props.theme.tabport}) {
+  @media only screen and (min-width: ${props => props.theme.tabland}) {
     & {
       padding: 3rem 0 10rem;
       justify-content: space-between;
@@ -70,7 +70,22 @@ const PolicyFooter = styled.ul`
 
   @media only screen and (min-width: ${props => props.theme.tabport}) {
     & {
+      margin-bottom: 1rem;
+
+      order: -1;
+      flex-basis: 100%;
       display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media only screen and (min-width: ${props => props.theme.tabland}) {
+    & {
+      margin-bottom: 0;
+
+      flex-basis: auto;
+      order: 0;
+      justify-content: flex-start;
     }
   }
 
@@ -93,9 +108,9 @@ const IconFooter = styled.ul`
   flex-basis: 100%;
   display: flex;
   justify-content: center;
-  order: -1;
+  order: -2;
 
-  @media only screen and (min-width: ${props => props.theme.tabport}) {
+  @media only screen and (min-width: ${props => props.theme.tabland}) {
     & {
       margin-bottom: 0;
 
