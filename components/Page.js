@@ -45,6 +45,7 @@ const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     letter-spacing: 1.2px;
     font-size: 1.6rem;
+    position: relative;
   }
 
   a {
