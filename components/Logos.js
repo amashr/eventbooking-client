@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledLogos = styled.section`
-  padding: 3rem 0;
+  padding: 4.5rem;
 
   .wrapper {
     max-width: 116rem;
@@ -12,15 +12,46 @@ const StyledLogos = styled.section`
     justify-content: space-between;
     align-items: center;
   }
+
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      padding: 3rem 0;
+    }
+  }
 `;
 
 const LogoBox = styled.div`
-  &:not(:last-child) {
-    padding-right: 3rem;
+  flex-basis: 50%;
+
+  display: flex;
+  justify-content: center;
+
+  &:not(:nth-last-of-type(-n + 2)) {
+    margin-bottom: 6rem;
   }
 
   svg {
     fill: var(--blueCool3);
+    max-width: 60%;
+  }
+
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      margin-bottom: 0;
+      flex-basis: auto;
+
+      &:not(:nth-last-of-type(-n + 2)) {
+        margin-bottom: 0;
+      }
+
+      &:not(:last-child) {
+        padding-right: 3rem;
+      }
+
+      svg {
+        max-width: 100%;
+      }
+    }
   }
 `;
 
