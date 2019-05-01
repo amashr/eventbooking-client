@@ -24,6 +24,14 @@ const StyledLogos = styled.section`
       padding: 4rem 0;
     }
   }
+
+  @media only screen and (min-width: ${props => props.theme.bigdesktop}) {
+    & {
+      .wrapper {
+        max-width: 80%;
+      }
+    }
+  }
 `;
 
 const LogoBox = styled.div`
