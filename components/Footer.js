@@ -40,18 +40,39 @@ const UpperFooter = styled.div`
 `;
 
 const LowerFooter = styled.div`
-  padding: 3rem 0 10rem;
+  padding: 3rem 1rem;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      padding: 3rem 0 10rem;
+      justify-content: space-between;
+    }
+  }
 
   p {
     color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+
+    @media only screen and (min-width: ${props => props.theme.tabport}) {
+      & {
+        text-align: left;
+      }
+    }
   }
 `;
 
 const PolicyFooter = styled.ul`
-  display: flex;
+  display: none;
+
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      display: flex;
+    }
+  }
 
   li {
     transition: var(--transition);
@@ -67,7 +88,22 @@ const PolicyFooter = styled.ul`
 `;
 
 const IconFooter = styled.ul`
+  margin-bottom: 1rem;
+
+  flex-basis: 100%;
   display: flex;
+  justify-content: center;
+  order: -1;
+
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      margin-bottom: 0;
+
+      justify-content: flex-start;
+      flex-basis: auto;
+      order: 0;
+    }
+  }
 
   li:not(:last-child) {
     margin-right: 1rem;
