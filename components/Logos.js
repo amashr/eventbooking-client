@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const StyledLogos = styled.section`
   padding: 4.5rem;
+  background: var(--blueCool9);
 
   .wrapper {
     max-width: 116rem;
