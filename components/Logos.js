@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 const StyledLogos = styled.section`
-  padding: 30px 0;
+  padding: 3rem 0;
 
   .wrapper {
     max-width: 116rem;
     margin: 0 auto;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
@@ -15,7 +16,7 @@ const StyledLogos = styled.section`
 
 const LogoBox = styled.div`
   &:not(:last-child) {
-    margin-right: 3rem;
+    padding-right: 3rem;
   }
 
   svg {
