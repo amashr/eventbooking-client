@@ -15,6 +15,12 @@ const StyledLogos = styled.section`
 
   @media only screen and (min-width: ${props => props.theme.tabland}) {
     & {
+      padding: 4rem 3rem;
+    }
+  }
+
+  @media only screen and (min-width: ${props => props.theme.desktop}) {
+    & {
       padding: 4rem 0;
     }
   }
@@ -45,6 +51,10 @@ const LogoBox = styled.div`
 
       &:not(:nth-last-of-type(-n + 3)) {
         margin-bottom: 6rem;
+      }
+
+      svg {
+        max-width: 50%;
       }
     }
   }
