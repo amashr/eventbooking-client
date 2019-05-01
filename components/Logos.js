@@ -13,9 +13,9 @@ const StyledLogos = styled.section`
     align-items: center;
   }
 
-  @media only screen and (min-width: ${props => props.theme.tabport}) {
+  @media only screen and (min-width: ${props => props.theme.tabland}) {
     & {
-      padding: 3rem 0;
+      padding: 4rem 0;
     }
   }
 `;
@@ -37,10 +37,23 @@ const LogoBox = styled.div`
 
   @media only screen and (min-width: ${props => props.theme.tabport}) {
     & {
-      margin-bottom: 0;
-      flex-basis: auto;
+      flex-basis: calc(100% / 3);
 
       &:not(:nth-last-of-type(-n + 2)) {
+        margin-bottom: 0;
+      }
+
+      &:not(:nth-last-of-type(-n + 3)) {
+        margin-bottom: 6rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: ${props => props.theme.tabland}) {
+    & {
+      flex-basis: auto;
+
+      &:not(:nth-last-of-type(-n + 3)) {
         margin-bottom: 0;
       }
 
