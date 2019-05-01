@@ -9,6 +9,7 @@ const StyledNavbar = styled.nav`
     props.isScroll ? 'var(--blueCool10)' : 'transparent'};
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   padding: 1rem;
   box-shadow: ${props => (props.isScroll ? 'var(--box-shadow)' : 'none')};
