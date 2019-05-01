@@ -9,6 +9,7 @@ const StyledNavbar = styled.nav`
     props.isScroll ? 'var(--blueCool10)' : 'transparent'};
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   padding: 1rem;
   box-shadow: ${props => (props.isScroll ? 'var(--box-shadow)' : 'none')};
@@ -119,7 +120,7 @@ const Navbar = props => (
   <StyledNavbar isScroll={props.isScroll}>
     <Logo>
       <Link href="/">
-        <a>Event Booking</a>
+        <a>EventBooking</a>
       </Link>
     </Logo>
 

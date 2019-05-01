@@ -7,6 +7,7 @@ const StyledMain = styled.main`
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -0.2rem;
+  background-attachment: fixed;
   height: 40rem;
   padding: 0 1rem;
   color: var(--blueCool10);

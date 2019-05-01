@@ -3,6 +3,7 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import Meta from './Meta';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const theme = {
   tabport: '37.5em', // 600px
@@ -37,19 +38,29 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: 400;
     color: var(--blueCool3);
     background: var(--blueCool10);
     text-rendering: optimizeLegibility;
     letter-spacing: 1.2px;
     font-size: 1.6rem;
+    position: relative;
+
+    @media only screen and (min-width: ${props => props.theme.bigdesktop}) {
+      & {
+        font-size: 2rem;
+      }
+    }
   }
 
   a {
     text-decoration: none;
-    font-weight: 500;
     color: var(--blueCool3);
+  }
+
+  ul {
+    list-style-type: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -89,7 +100,7 @@ class Page extends Component {
           <GlobalStyle />
           <Navbar isScroll={this.state.isScroll} />
           {this.props.children}
-          <p>Footer Goes here</p>
+          <Footer />
         </>
       </ThemeProvider>
     );
