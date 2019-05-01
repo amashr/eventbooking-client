@@ -46,6 +46,10 @@ const LogoBox = styled.div`
       &:not(:nth-last-of-type(-n + 3)) {
         margin-bottom: 6rem;
       }
+
+      svg {
+        max-width: 40%;
+      }
     }
   }
 
