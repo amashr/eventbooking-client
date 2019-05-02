@@ -43,12 +43,13 @@ const UpperFooter = styled.div`
 
   h4 {
     padding-bottom: 1.2rem;
+    font-weight: 600;
     text-transform: uppercase;
-    color: var(--blueCool6);
+    /* color: var(--blueCool6); */
   }
 
   li {
-    padding-bottom: 0.6rem;
+    padding-bottom: 1.6rem;
     transition: var(--transition);
 
     a:hover {
@@ -196,37 +197,37 @@ const Footer = () => (
           <h4>Helpful Links</h4>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>My Account</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Ticket Your Event</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>FAQ</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Refund and Exchanges</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Get Help</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Sell</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Custom Tickets</a>
             </Link>
           </li>
         </ul>
