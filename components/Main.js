@@ -123,7 +123,7 @@ const ButtonIcon = styled.button`
 const Main = () => (
   <StyledMain>
     <StyledMainWrapper>
-      <h1>Aliquam rutrum pellentesque sempere.</h1>
+      <h1>Live your best life. Let's find an event.</h1>
 
       <StyledForm>
         <input type="text" placeholder="Search events by keyword " />

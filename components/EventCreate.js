@@ -31,7 +31,7 @@ const Wrapper = styled.div`
       justify-content: space-between;
 
       h4 {
-        font-size: 6rem;
+        font-size: 4.4rem;
         text-align: left;
         padding-bottom: 0;
 
