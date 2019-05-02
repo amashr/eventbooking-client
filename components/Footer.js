@@ -186,6 +186,8 @@ const IconFooter = styled.ul`
   }
 `;
 
+const presentYear = new Date().getFullYear();
+
 const Footer = () => (
   <StyledFooter>
     <Wrapper>
@@ -348,7 +350,7 @@ const Footer = () => (
       </UpperFooter>
 
       <LowerFooter>
-        <p>&copy; EventBooking 2019. All rights reserved.</p>
+        <p>&copy; EventBooking {presentYear}. All rights reserved.</p>
 
         <PolicyFooter>
           <li>
