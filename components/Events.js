@@ -34,6 +34,10 @@ const EventsWrapper = styled.div`
     flex-basis: calc(100% / 3);
     margin-right: 2rem;
   }
+
+  & > div:nth-child(-n + 3) {
+    margin-bottom: 2.6rem;
+  }
 `;
 
 class Events extends Component {

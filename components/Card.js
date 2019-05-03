@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const StyledCard = styled.div`
   border-radius: 0.4rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   max-width: 36rem;
 
   display: flex;
