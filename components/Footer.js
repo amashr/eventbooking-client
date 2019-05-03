@@ -45,7 +45,6 @@ const UpperFooter = styled.div`
     padding-bottom: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
-    /* color: var(--blueCool6); */
   }
 
   li {
