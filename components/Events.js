@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import Card from './Card';
+
 const Events = () => (
   <section>
     <div>
@@ -10,13 +12,7 @@ const Events = () => (
       </div>
 
       <div>
-        <div>
-          <img src="/static/event.jpg" alt="Event" />
-          <h4>Event Title</h4>
-          <p>Thu, May 16, 9:00am</p>
-          <p>Rock City Mall, Mwanza, Tanzania</p>
-          <p>Free</p>
-        </div>
+        <Card />
       </div>
     </div>
   </section>
