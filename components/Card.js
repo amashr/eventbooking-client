@@ -1,11 +1,11 @@
-const Card = () => (
+const Card = props => (
   <div>
     <img src="/static/event.jpg" alt="Event" />
-    <h4>Event Title</h4>
-    <p>Thu, May 16, 9:00am</p>
-    <p>Rock City Mall, Mwanza, Tanzania</p>
-    <p>Free</p>
+    <h4>{props.title}</h4>
+    <p>{props.date}</p>
+    <p>{props.location}</p>
+    <p>{props.price}</p>
   </div>
-)
+);
 
 export default Card;
