@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 const StyledCard = styled.div`
-  border: 1px solid black;
+  border-radius: 0.4rem;
   max-width: 36rem;
 
   display: flex;
@@ -10,6 +10,8 @@ const StyledCard = styled.div`
 
   a {
     img {
+      border-top-left-radius: 0.4rem;
+      border-top-right-radius: 0.4rem;
       width: 100%;
       height: 17rem;
       object-fit: cover;
@@ -18,7 +20,28 @@ const StyledCard = styled.div`
 `;
 
 const CardContent = styled.div`
-  /* flex: 1 50%; */
+  padding: 2rem 1rem;
+  font-size: 1.4rem;
+
+  h4 {
+    font-size: 1.5rem;
+    padding-bottom: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .date {
+    color: rgba(0, 0, 0, 0.4);
+    padding-bottom: 0.5rem;
+  }
+
+  .location {
+    padding-bottom: 0.5rem;
+  }
+
+  .price {
+    text-transform: capitalize;
+  }
 `;
 
 const Card = props => (
@@ -35,9 +58,9 @@ const Card = props => (
           <a>{props.title}</a>
         </Link>
       </h4>
-      <p>{props.date}</p>
-      <p>{props.location}</p>
-      <p>{props.price}</p>
+      <p className="date">{props.date}</p>
+      <p className="location">{props.location}</p>
+      <p className="price">{props.price}</p>
     </CardContent>
   </StyledCard>
 );
