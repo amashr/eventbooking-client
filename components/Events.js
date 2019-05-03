@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Card from './Card';
 
 const StyledEvents = styled.section`
-  padding: 4.5rem 0;
+  padding: 4.5rem 1rem;
 
   @media only screen and (min-width: ${props => props.theme.tabport}) {
     & {
@@ -24,11 +24,21 @@ const Wrapper = styled.div`
 `;
 
 const EventSubtitle = styled.div`
-  padding: 2rem 0 1.5rem;
+  padding: 1rem 0;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  a {
+    font-size: 1.4rem;
+  }
+
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      padding: 2rem 0 1.5rem;
+    }
+  }
 `;
 
 const EventsWrapper = styled.div`
