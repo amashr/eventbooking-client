@@ -236,37 +236,37 @@ const Footer = () => (
           <h4>Our Network</h4>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Live Nation</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Front Gate Tickets</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>TicketWeb</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>TicketNow</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>TFF Ticket Exchange</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Movies Ticket</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>EventBooking Blog</a>
             </Link>
           </li>
         </ul>
@@ -275,37 +275,37 @@ const Footer = () => (
           <h4>About Us</h4>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Who We Are</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>EventBooking Blog</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Privacy Policy</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Work With Us</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Innovation</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Across East Africa</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Across the Globe</a>
             </Link>
           </li>
         </ul>
@@ -314,37 +314,37 @@ const Footer = () => (
           <h4>Friends &amp; Partners</h4>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>AWS</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Microsoft Azure</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Google Cloud Platform</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>M-Pesa</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Stripe</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Visa</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>My Link</a>
+              <a>Master Card</a>
             </Link>
           </li>
         </ul>
