@@ -5,7 +5,13 @@ import styled from 'styled-components';
 import Card from './Card';
 
 const StyledEvents = styled.section`
-  padding: 7rem 0;
+  padding: 4.5rem 0;
+
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      padding: 7rem 0;
+    }
+  }
 `;
 
 const Wrapper = styled.div`
