@@ -44,15 +44,28 @@ const EventSubtitle = styled.div`
 const EventsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 
-  & > div:not(:nth-child(3n)) {
-    flex-basis: calc(100% / 3);
-    margin-right: 2rem;
+  & > div {
+    margin-bottom: 1.2rem;
   }
 
-  & > div:nth-child(-n + 3) {
-    margin-bottom: 2.6rem;
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      justify-content: space-between;
+
+      & > div {
+        margin-bottom: 0;
+      }
+
+      & > div:not(:nth-child(3n)) {
+        flex-basis: calc(100% / 3);
+        margin-right: 2rem;
+      }
+
+      & > div:nth-child(-n + 3) {
+        margin-bottom: 2.6rem;
+      }
+    }
   }
 `;
 

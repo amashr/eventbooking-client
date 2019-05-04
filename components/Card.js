@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledCard = styled.div`
   border-radius: 0.4rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  max-width: 36rem;
+  max-width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -16,6 +16,12 @@ const StyledCard = styled.div`
       width: 100%;
       height: 17rem;
       object-fit: cover;
+    }
+  }
+
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      max-width: 36rem;
     }
   }
 `;
