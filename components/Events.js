@@ -30,8 +30,24 @@ const Wrapper = styled.div`
   margin: 0 auto;
 
   h2 {
-    font-size: 3rem;
+    font-size: 2.3rem;
     margin-bottom: -1.5rem;
+  }
+
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: ${props => props.theme.tabland}) {
+    & {
+      h2 {
+        font-size: 3rem;
+      }
+    }
   }
 
   @media only screen and (min-width: ${props => props.theme.bigdesktop}) {

@@ -37,7 +37,7 @@ const EventsWrapper = styled.div`
     }
   }
 
-  @media only screen and (min-width: ${props => props.theme.tabland}) {
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
     & {
       & > div {
         margin-bottom: 0;
