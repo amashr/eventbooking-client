@@ -31,6 +31,7 @@ const Wrapper = styled.div`
 
   h2 {
     font-size: 3rem;
+    margin-bottom: -1.5rem;
   }
 
   @media only screen and (min-width: ${props => props.theme.bigdesktop}) {

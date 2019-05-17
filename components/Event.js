@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Card from './Card';
 
 const EventSubtitle = styled.div`
-  padding: 1rem 0;
+  padding: 3.5rem 0 1.5rem;
 
   display: flex;
   justify-content: space-between;
@@ -12,12 +12,6 @@ const EventSubtitle = styled.div`
 
   a {
     font-size: 1.4rem;
-  }
-
-  @media only screen and (min-width: ${props => props.theme.tabport}) {
-    & {
-      padding: 2rem 0 1.5rem;
-    }
   }
 `;
 
