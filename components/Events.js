@@ -90,18 +90,6 @@ const EventsWrapper = styled.div`
       }
     }
   }
-
-  @media only screen and (min-width: ${props => props.theme.desktop}) {
-    & {
-      & > div:not(:nth-last-of-type(-n + 2)) {
-        margin-bottom: 0;
-      }
-
-      & > div:nth-child(-n + 3) {
-        margin-bottom: 2.6rem;
-      }
-    }
-  }
 `;
 
 class Events extends Component {

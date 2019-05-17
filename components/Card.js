@@ -30,12 +30,6 @@ const StyledCard = styled.div`
       max-width: 31.5%;
     }
   }
-
-  @media only screen and (min-width: ${props => props.theme.desktop}) {
-    & {
-      max-width: 36rem;
-    }
-  }
 `;
 
 const CardContent = styled.div`
