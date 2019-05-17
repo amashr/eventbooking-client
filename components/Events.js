@@ -15,6 +15,12 @@ const StyledEvents = styled.section`
 
   @media only screen and (min-width: ${props => props.theme.tabland}) {
     & {
+      padding: 6rem 3rem;
+    }
+  }
+
+  @media only screen and (min-width: ${props => props.theme.desktop}) {
+    & {
       padding: 7rem 0;
     }
   }
@@ -71,15 +77,24 @@ const EventsWrapper = styled.div`
 
   @media only screen and (min-width: ${props => props.theme.tabland}) {
     & {
-      justify-content: space-between;
-
       & > div {
         margin-bottom: 0;
       }
 
-      & > div:not(:nth-child(3n)) {
-        flex-basis: calc(100% / 3);
-        margin-right: 2rem;
+      & > div:not(:nth-last-of-type(-n + 2)) {
+        margin-bottom: 0;
+      }
+
+      & > div:nth-child(-n + 3) {
+        margin-bottom: 2.6rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: ${props => props.theme.desktop}) {
+    & {
+      & > div:not(:nth-last-of-type(-n + 2)) {
+        margin-bottom: 0;
       }
 
       & > div:nth-child(-n + 3) {

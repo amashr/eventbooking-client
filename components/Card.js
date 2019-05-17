@@ -25,7 +25,13 @@ const StyledCard = styled.div`
     }
   }
 
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: ${props => props.theme.tabport}) {
+    & {
+      max-width: 31.5%;
+    }
+  }
+
+  @media only screen and (min-width: ${props => props.theme.desktop}) {
     & {
       max-width: 36rem;
     }
