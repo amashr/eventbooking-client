@@ -9,6 +9,12 @@ const StyledEvents = styled.section`
 
   @media only screen and (min-width: ${props => props.theme.tabport}) {
     & {
+      padding: 5.5rem 2rem;
+    }
+  }
+
+  @media only screen and (min-width: ${props => props.theme.tabland}) {
+    & {
       padding: 7rem 0;
     }
   }
@@ -45,11 +51,25 @@ const EventsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
 
-  & > div {
+  & > div:not(:last-child) {
     margin-bottom: 1.2rem;
   }
 
-  @media only screen and (min-width: ${props => props.theme.tabport}) {
+  @media only screen and (min-width: 480px) {
+    & {
+      justify-content: space-between;
+
+      & > div:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+      & > div:not(:nth-last-of-type(-n + 2)) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: ${props => props.theme.tabland}) {
     & {
       justify-content: space-between;
 
