@@ -60,12 +60,12 @@ const EventsWrapper = styled.div`
   }
 `;
 
-const Event = () => (
+const Event = props => (
   <>
     <EventSubtitle>
-      <h3>Concerts</h3>
+      <h3>{props.eventCat}</h3>
       <Link href="">
-        <a>See All Concerts</a>
+        <a>See All {props.eventCat}</a>
       </Link>
     </EventSubtitle>
 

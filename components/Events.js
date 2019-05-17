@@ -40,17 +40,15 @@ const Wrapper = styled.div`
   }
 `;
 
-class Events extends Component {
-  render() {
-    return (
-      <StyledEvents>
-        <Wrapper>
-          <h2>Top Selling</h2>
-          <Event />
-        </Wrapper>
-      </StyledEvents>
-    );
-  }
-}
+const Events = props => (
+  <StyledEvents>
+    <Wrapper>
+      <h2>Top Selling</h2>
+      {props.eventsCategories.map(eventCat => (
+        <Event eventCat={eventCat} />
+      ))}
+    </Wrapper>
+  </StyledEvents>
+);
 
 export default Events;
