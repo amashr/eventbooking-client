@@ -33,6 +33,12 @@ const Wrapper = styled.div`
   h2 {
     font-size: 3rem;
   }
+
+  @media only screen and (min-width: ${props => props.theme.bigdesktop}) {
+    & {
+      max-width: 80%;
+    }
+  }
 `;
 
 const EventSubtitle = styled.div`
