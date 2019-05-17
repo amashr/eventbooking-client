@@ -70,7 +70,9 @@ const GlobalStyle = createGlobalStyle`
 
 class Page extends Component {
   _isMounted = false;
-  state = { isScroll: false };
+  state = {
+    isScroll: false
+  };
 
   componentDidMount() {
     this._isMounted = true;
