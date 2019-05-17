@@ -45,7 +45,7 @@ const Events = props => (
     <Wrapper>
       <h2>Top Selling</h2>
       {props.eventsCategories.map(eventCat => (
-        <Event eventCat={eventCat} />
+        <Event eventCat={eventCat} events={props.events} key={eventCat} />
       ))}
     </Wrapper>
   </StyledEvents>

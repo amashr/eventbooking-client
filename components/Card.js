@@ -61,7 +61,7 @@ const Card = props => (
   <StyledCard>
     <Link href="/">
       <a>
-        <img src="/static/event.jpg" alt={props.title} />
+        <img src={props.img} alt={props.title} />
       </a>
     </Link>
 

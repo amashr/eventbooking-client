@@ -70,17 +70,18 @@ const Event = props => (
     </EventSubtitle>
 
     <EventsWrapper>
-      {/* {this.state.events.map((event, key) => {
-              return (
-                <Card
-                  title={event.title}
-                  date={event.date}
-                  location={event.location}
-                  price={event.price}
-                  key={key}
-                />
-              );
-            })} */}
+      {props.events.map(event => {
+        return (
+          <Card
+            title={event.title}
+            date={event.date}
+            location={event.location}
+            price={event.price}
+            key={event.title}
+            img={event.img}
+          />
+        );
+      })}
     </EventsWrapper>
   </>
 );
