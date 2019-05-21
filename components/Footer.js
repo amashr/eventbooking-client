@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
   font-size: 1.5rem;
-  background: var(--blueCool6);
+  background: #1f262d;
   color: var(--blueCool10);
 
   @media only screen and (min-width: ${props => props.theme.bigdesktop}) {
@@ -44,7 +44,7 @@ const UpperFooter = styled.div`
   }
 
   h4 {
-    padding-bottom: 1.2rem;
+    padding-bottom: 2rem;
     font-weight: 600;
     font-size: 1.6rem;
     text-transform: capitalize;
