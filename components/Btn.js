@@ -13,6 +13,7 @@ const StyledBtn = styled.a`
     text-transform: uppercase;
     text-align: center;
     font-size: 1.3rem;
+    font-weight: 600;
     display: flex;
     align-items: center;
     transition: var(--transition);
@@ -21,8 +22,8 @@ const StyledBtn = styled.a`
   &:hover,
   &:active {
     color: var(--blueCool10);
-    border-color: var(--redDark);
-    background: var(--redDark);
+    border-color: var(--red);
+    background: var(--red);
   }
 `;
 

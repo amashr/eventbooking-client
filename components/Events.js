@@ -32,6 +32,7 @@ const Wrapper = styled.div`
   h2 {
     font-size: 2.3rem;
     margin-bottom: -1.5rem;
+    font-weight: 600;
   }
 
   @media only screen and (min-width: ${props => props.theme.tabport}) {

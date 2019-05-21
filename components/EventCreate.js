@@ -46,13 +46,11 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     transition: var(--transition);
+    color: var(--blueCool10);
 
     &:hover {
-      color: var(--blueCool10);
-
       svg {
         transform: translateX(0.5rem);
-        fill: var(--blueCool10);
       }
     }
 
@@ -60,7 +58,7 @@ const Wrapper = styled.div`
       padding-left: 1rem;
       width: 3rem;
       height: 3rem;
-      fill: var(--blueCool3);
+      fill: var(--blueCool10);
       transition: var(--transition);
     }
 

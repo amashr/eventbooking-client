@@ -6,7 +6,7 @@ const Meta = () => (
     <meta charSet="utf-8" />
     <title>Event Booking</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Nunito:400,600"
+      href="https://fonts.googleapis.com/css?family=Nunito:400,600,900"
       rel="stylesheet"
     />
   </Head>

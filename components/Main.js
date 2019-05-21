@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 const StyledMain = styled.main`
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
     url('/static/main.jpg');
-  background-blend-mode: saturation;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -0.2rem;
+  background-position: center;
   background-attachment: fixed;
   height: 40rem;
   padding: 0 1rem;
@@ -40,6 +39,7 @@ const StyledMainWrapper = styled.div`
   h1 {
     font-size: 3.4rem;
     margin-bottom: 5rem;
+    font-weight: 900;
 
     @media only screen and (min-width: ${props => props.theme.tabport}) {
       & {
@@ -75,7 +75,7 @@ const StyledForm = styled.div`
 
     @media only screen and (min-width: ${props => props.theme.tabport}) {
       & {
-        font-size: 1.7rem;
+        font-size: 2rem;
         padding: 1.7rem;
         margin-right: -4.7rem;
       }
@@ -84,7 +84,7 @@ const StyledForm = styled.div`
     @media only screen and (min-width: ${props => props.theme.tabland}) {
       & {
         width: 60%;
-        font-size: 2rem;
+        font-size: 2.3rem;
         padding: 2rem;
         margin-right: -5rem;
       }

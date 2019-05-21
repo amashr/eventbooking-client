@@ -10,8 +10,14 @@ const EventSubtitle = styled.div`
   justify-content: space-between;
   align-items: center;
 
+  h3 {
+    font-weight: 600;
+  }
+
   a {
     font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--red);
   }
 `;
 

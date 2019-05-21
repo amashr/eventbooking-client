@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
   font-size: 1.5rem;
+  background: var(--blueCool6);
+  color: var(--blueCool10);
 
   @media only screen and (min-width: ${props => props.theme.bigdesktop}) {
     & {
@@ -28,7 +30,7 @@ const UpperFooter = styled.div`
   @media only screen and (min-width: ${props => props.theme.tabland}) {
     & {
       padding: 5rem 3rem;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
       display: flex;
       justify-content: space-between;
@@ -44,21 +46,28 @@ const UpperFooter = styled.div`
   h4 {
     padding-bottom: 1.2rem;
     font-weight: 600;
-    text-transform: uppercase;
+    font-size: 1.6rem;
+    text-transform: capitalize;
   }
 
   li {
     padding-bottom: 1.6rem;
+    font-size: 1.4rem;
     transition: var(--transition);
 
-    a:hover {
-      color: var(--redDark);
+    a {
+      color: var(--blueCool10);
+
+      &:hover {
+        color: var(--red);
+      }
     }
   }
 `;
 
 const LowerFooter = styled.div`
   padding: 3rem 1rem;
+  font-size: 1.4rem;
 
   display: flex;
   justify-content: center;
@@ -78,7 +87,6 @@ const LowerFooter = styled.div`
   }
 
   p {
-    color: rgba(0, 0, 0, 0.4);
     text-align: center;
 
     @media only screen and (min-width: ${props => props.theme.tabport}) {
@@ -115,9 +123,14 @@ const PolicyFooter = styled.ul`
 
   li {
     transition: var(--transition);
+    color: var(--blueCool10);
 
-    a:hover {
-      color: var(--redDark);
+    a {
+      color: var(--blueCool10);
+
+      &:hover {
+        color: var(--red);
+      }
     }
   }
 
@@ -165,7 +178,7 @@ const IconFooter = styled.ul`
 
     &:hover {
       transform: scale(1.2);
-      fill: var(--redDark);
+      fill: var(--red);
     }
   }
 

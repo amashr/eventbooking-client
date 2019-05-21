@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 const StyledCard = styled.div`
   border-radius: 0.4rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
   max-width: 100%;
+  background: rgba(255, 255, 255, 0.5);
 
   display: flex;
   flex-direction: column;
@@ -44,8 +45,8 @@ const CardContent = styled.div`
   }
 
   .date {
-    color: rgba(0, 0, 0, 0.4);
     padding-bottom: 0.5rem;
+    font-size: 1.2rem;
   }
 
   .location {

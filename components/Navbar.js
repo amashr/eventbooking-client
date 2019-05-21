@@ -50,12 +50,9 @@ const Logo = styled.div`
     &,
     &:visited {
       color: var(--red);
+      text-transform: lowercase;
+      font-weight: 600;
       transition: var(--transition);
-    }
-
-    &:hover,
-    &:active {
-      color: var(--redDark);
     }
   }
 `;
@@ -106,7 +103,7 @@ const NavbarLinkContainer = styled.ul`
 
       &:hover,
       &:active {
-        color: var(--redDark);
+        color: var(--red);
       }
     }
   }
