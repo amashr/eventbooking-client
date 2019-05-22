@@ -2,7 +2,7 @@ import react, { Component } from 'react';
 
 import Main from '../components/Main';
 import Logos from '../components/Logos';
-import EventCreate from '../components/EventCreate';
+import Banner from '../components/Banner';
 import Events from '../components/Events';
 
 class Home extends Component {
@@ -20,7 +20,7 @@ class Home extends Component {
         img: '/static/event.jpg',
         date: 'Thu, May 26, 7:30am',
         location: 'Coco Beach, Dar es salaam, Tanzania',
-        price: 'free'
+        price: '$200'
       },
       {
         title: 'Event3',
@@ -62,7 +62,7 @@ class Home extends Component {
         <Main />
         <Logos />
         <Events eventsCategories={eventsCategories} events={events} />
-        <EventCreate />
+        <Banner />
       </>
     );
   }

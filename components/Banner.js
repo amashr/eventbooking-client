@@ -18,6 +18,7 @@ const Wrapper = styled.div`
 
   h4 {
     font-size: 3rem;
+    font-weight: 600;
     line-height: 1;
     text-align: center;
     padding-bottom: 1rem;
@@ -70,7 +71,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const EventCreate = () => (
+const Banner = () => (
   <StyledEventBanner>
     <Wrapper>
       <h4>
@@ -96,4 +97,4 @@ const EventCreate = () => (
   </StyledEventBanner>
 );
 
-export default EventCreate;
+export default Banner;
