@@ -35,7 +35,7 @@ const StyledLogos = styled.section`
   @media only screen and (min-width: ${props => props.theme.bigdesktop}) {
     & {
       .wrapper {
-        max-width: 95%;
+        max-width: 80%;
       }
     }
   }
