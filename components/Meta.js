@@ -9,6 +9,7 @@ const Meta = () => (
       href="https://fonts.googleapis.com/css?family=Nunito:400,600,900"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/static/nprogress.css" />
   </Head>
 );
 

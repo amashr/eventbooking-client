@@ -1,8 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Router from 'next/router';
+import NProgress from 'nprogress';
 import Link from 'next/link';
 import styled from 'styled-components';
 
 import Btn from './Btn';
+
+Router.events.on('routeChangeStart', () => {
+  NProgress.start();
+});
+
+Router.events.on('routeChangeComplete', () => {
+  NProgress.done();
+});
+
+Router.events.on('routeChangeError', () => {
+  NProgress.done();
+});
 
 const StyledNavbar = styled.nav`
   background: ${props =>
