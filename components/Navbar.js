@@ -110,6 +110,7 @@ const NavbarLinkContainer = styled.ul`
     .link {
       &,
       &:visited {
+        font-weight: 300;
         color: ${props =>
           props.isScroll ? 'var(--blueCool3)' : 'var(--blueCool10)'};
         transition: var(--transition);

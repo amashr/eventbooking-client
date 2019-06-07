@@ -39,7 +39,7 @@ const StyledMainWrapper = styled.div`
   h1 {
     font-size: 3.4rem;
     margin-bottom: 5rem;
-    font-weight: 900;
+    /* font-weight: 900; */
 
     @media only screen and (min-width: ${props => props.theme.tabport}) {
       & {
