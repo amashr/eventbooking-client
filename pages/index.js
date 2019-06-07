@@ -55,13 +55,13 @@ class Home extends Component {
   };
 
   render() {
-    const { events, eventsCategories } = this.state;
+    const { eventsCategories } = this.state;
 
     return (
       <>
         <Main />
         <Logos />
-        <Events eventsCategories={eventsCategories} events={events} />
+        <Events eventsCategories={eventsCategories} />
         <Banner />
       </>
     );

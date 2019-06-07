@@ -64,7 +64,7 @@ const Event = props => (
   <>
     <EventSubtitle>
       <h3>{props.eventCat}</h3>
-      <Link href="">
+      <Link href={{ pathname: `/${props.eventCat}` }}>
         <a>See All {props.eventCat}</a>
       </Link>
     </EventSubtitle>
@@ -74,11 +74,12 @@ const Event = props => (
         return (
           <Card
             title={event.title}
-            date={event.date}
+            date={event.createdAt}
             location={event.location}
             price={event.price}
-            key={event.title}
-            img={event.img}
+            id={event.id}
+            key={event.id}
+            img={event.image}
           />
         );
       })}

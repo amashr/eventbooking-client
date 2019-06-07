@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Query } from 'react-apollo';
+import { gql } from 'apollo-boost';
 
 import Event from './Event';
 
@@ -58,13 +59,31 @@ const Wrapper = styled.div`
   }
 `;
 
+const ALL_EVENTS_QUERY = gql`
+  query ALL_EVENTS_QUERY {
+    events {
+      id
+      title
+      image
+      price
+      createdAt
+    }
+  }
+`;
+
 const Events = props => (
   <StyledEvents>
     <Wrapper>
       <h2>Top Selling</h2>
-      {props.eventsCategories.map(eventCat => (
-        <Event eventCat={eventCat} events={props.events} key={eventCat} />
-      ))}
+      <Query query={ALL_EVENTS_QUERY}>
+        {({ loading, error, data }) => {
+          if (loading) return <p>Loading...</p>;
+          if (error) return <p>Error: {error.message}</p>;
+          return props.eventsCategories.map(eventCat => (
+            <Event events={data.events} eventCat={eventCat} key={eventCat} />
+          ));
+        }}
+      </Query>
     </Wrapper>
   </StyledEvents>
 );

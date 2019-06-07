@@ -60,7 +60,7 @@ const CardContent = styled.div`
 
 const Card = props => (
   <StyledCard>
-    <Link href="/">
+    <Link href={{ pathname: '/event', query: { id: props.id } }}>
       <a>
         <img src={props.img} alt={props.title} />
       </a>
@@ -68,7 +68,7 @@ const Card = props => (
 
     <CardContent>
       <h4>
-        <Link href="/">
+        <Link href={{ pathname: '/event', query: { id: props.id } }}>
           <a>{props.title}</a>
         </Link>
       </h4>
