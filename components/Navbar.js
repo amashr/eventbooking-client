@@ -149,50 +149,62 @@ const Navbar = props => (
     </NavbarMenu>
 
     <NavbarItem>
-      <NavbarLinkContainer isScroll={props.isScroll}>
-        <li>
-          <Link href="/concerts">
-            <a className="link">Concerts</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/sports">
-            <a className="link">Sports</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/arts">
-            <a className="link">Arts &amp; Theater</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a className="link">For You</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a className="link">More</a>
-          </Link>
-        </li>
-      </NavbarLinkContainer>
+      <User>
+        {({ data: { user } }) => (
+          <>
+            <NavbarLinkContainer isScroll={props.isScroll}>
+              <li>
+                <Link href="/concerts">
+                  <a className="link">Concerts</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/sports">
+                  <a className="link">Sports</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/arts">
+                  <a className="link">Arts &amp; Theater</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/">
+                  <a className="link">For You</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/more">
+                  <a className="link">More</a>
+                </Link>
+              </li>
+            </NavbarLinkContainer>
 
-      <NavbarLinkContainer isScroll={props.isScroll}>
-        <li>
-          <Link href="/login">
-            <a className="link">Sign In</a>
-          </Link>
-        </li>
-        <li>
-          <Btn path="/">Get Started</Btn>
-        </li>
-        <User>
-          {({ data }) => {
-            const { user } = data;
-            return user.name;
-          }}
-        </User>
-      </NavbarLinkContainer>
+            <NavbarLinkContainer isScroll={props.isScroll}>
+              {!user && (
+                <>
+                  <li>
+                    <Link href="/signin">
+                      <a className="link">Sign In</a>
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Btn path="/signup">Get Started</Btn>
+                  </li>
+                </>
+              )}
+              {user && (
+                <li>
+                  <Link href="/account">
+                    <a className="link">Account</a>
+                  </Link>
+                </li>
+              )}
+            </NavbarLinkContainer>
+          </>
+        )}
+      </User>
     </NavbarItem>
   </StyledNavbar>
 );

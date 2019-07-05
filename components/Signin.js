@@ -3,13 +3,9 @@ import { Mutation } from 'react-apollo';
 import { gql } from 'apollo-boost';
 import { CURRENT_USER_QUERY } from './User';
 
-const SIGNUP_MUTATION = gql`
-  mutation SIGNUP_MUTATION(
-    $name: String!
-    $email: String!
-    $password: String!
-  ) {
-    signup(name: $name, email: $email, password: $password) {
+const SIGNIN_MUTATION = gql`
+  mutation SIGNIN_MUTATION($email: String!, $password: String!) {
+    signin(email: $email, password: $password) {
       id
       name
       email
@@ -17,9 +13,8 @@ const SIGNUP_MUTATION = gql`
   }
 `;
 
-class Signup extends Component {
+class SignIn extends Component {
   state = {
-    name: '',
     email: '',
     password: ''
   };
@@ -31,11 +26,11 @@ class Signup extends Component {
   render() {
     return (
       <Mutation
-        mutation={SIGNUP_MUTATION}
+        mutation={SIGNIN_MUTATION}
         variables={this.state}
         refetchQueries={[{ query: CURRENT_USER_QUERY }]}
       >
-        {(signup, { error, loading }) => {
+        {(signin, { error, loading }) => {
           if (loading) return <p>Loading...</p>;
           if (error) {
             return <p>{error.message.replace('GraphQL error: ', '')}</p>;
@@ -46,21 +41,11 @@ class Signup extends Component {
               method="post"
               onSubmit={async e => {
                 e.preventDefault();
-                await signup();
-                this.setState({ name: '', email: '', password: '' });
+                await signin();
+                this.setState({ email: '', password: '' });
               }}
             >
-              <h2>Signup</h2>
-              <label htmlFor="name">
-                Name
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="name"
-                  value={this.state.name}
-                  onChange={this.saveToState}
-                />
-              </label>
+              <h2>Signin</h2>
               <label htmlFor="email">
                 Email
                 <input
@@ -81,7 +66,7 @@ class Signup extends Component {
                   onChange={this.saveToState}
                 />
               </label>
-              <button type="submit">Sign Up</button>
+              <button type="submit">Sign In</button>
             </form>
           );
         }}
@@ -90,4 +75,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+export default SignIn;
