@@ -1,8 +1,6 @@
 import react, { Component } from 'react';
 import { Mutation } from 'react-apollo';
 import { gql } from 'apollo-boost';
-import { from } from 'zen-observable';
-import { sign } from 'crypto';
 
 const SIGNUP_MUTATION = gql`
   mutation SIGNUP_MUTATION(

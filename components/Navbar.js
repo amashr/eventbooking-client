@@ -5,6 +5,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import Btn from './Btn';
+import User from './User';
 
 Router.events.on('routeChangeStart', () => {
   NProgress.start();
@@ -185,6 +186,12 @@ const Navbar = props => (
         <li>
           <Btn path="/">Get Started</Btn>
         </li>
+        <User>
+          {({ data }) => {
+            const { user } = data;
+            return user.name;
+          }}
+        </User>
       </NavbarLinkContainer>
     </NavbarItem>
   </StyledNavbar>
