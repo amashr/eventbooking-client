@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import Btn from './Btn';
 import User from './User';
+import Signout from './Signout';
 
 Router.events.on('routeChangeStart', () => {
   NProgress.start();
@@ -195,11 +196,16 @@ const Navbar = props => (
                 </>
               )}
               {user && (
-                <li>
-                  <Link href="/account">
-                    <a className="link">Account</a>
-                  </Link>
-                </li>
+                <>
+                  <li>
+                    <Link href="/account">
+                      <a className="link">Account</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Signout />
+                  </li>
+                </>
               )}
             </NavbarLinkContainer>
           </>
