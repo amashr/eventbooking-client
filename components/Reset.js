@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import react, { Component } from 'react';
 import { Mutation } from 'react-apollo';
 import { gql } from 'apollo-boost';
 
@@ -10,7 +10,7 @@ const REQUEST_RESET_MUTATION = gql`
   }
 `;
 
-class RequestReset extends Component {
+class Reset extends Component {
   state = {
     email: ''
   };
@@ -60,4 +60,4 @@ class RequestReset extends Component {
   }
 }
 
-export default RequestReset;
+export default Reset;
