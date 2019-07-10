@@ -8,7 +8,6 @@ const StyledReset = styled.div`
 
 const reset = props => (
   <StyledReset>
-    <p>Reset your password {props.query.resetToken}</p>
     <Reset resetToken={props.query.resetToken} />
   </StyledReset>
 );
