@@ -1,18 +1,36 @@
-import react, { Component } from 'react';
+import React, { Component } from 'react';
 import { Mutation } from 'react-apollo';
 import { gql } from 'apollo-boost';
+import PropTypes from 'prop-types';
 
-const REQUEST_RESET_MUTATION = gql`
-  mutation REQUEST_RESET_MUTATION($email: String!) {
-    requestReset(email: $email) {
-      message
+import { CURRENT_USER_QUERY } from './User';
+
+const RESET_MUTATION = gql`
+  mutation RESET_MUTATION(
+    $resetToken: String!
+    $password: String!
+    $confirmPassword: String!
+  ) {
+    resetPassword(
+      resetToken: $resetToken
+      password: $password
+      confirmPassword: $confirmPassword
+    ) {
+      id
+      name
+      email
     }
   }
 `;
 
 class Reset extends Component {
+  static propTypes = {
+    resetToken: PropTypes.string.isRequired
+  };
+
   state = {
-    email: ''
+    password: '',
+    confirmPassword: ''
   };
 
   saveToState = e => {
@@ -21,14 +39,19 @@ class Reset extends Component {
 
   render() {
     return (
-      <Mutation mutation={REQUEST_RESET_MUTATION} variables={this.state}>
-        {(reset, { error, loading, data }) => {
+      <Mutation
+        mutation={RESET_MUTATION}
+        variables={{
+          resetToken: this.props.resetToken,
+          password: this.state.password,
+          confirmPassword: this.state.confirmPassword
+        }}
+        refetchQueries={[{ query: CURRENT_USER_QUERY }]}
+      >
+        {(reset, { error, loading }) => {
           if (loading) return <p>Loading...</p>;
           if (error) {
             return <p>{error.message.replace('GraphQL error: ', '')}</p>;
-          }
-          if (data) {
-            return <p>Success! Check your email address for reset link</p>;
           }
 
           return (
@@ -37,21 +60,31 @@ class Reset extends Component {
               onSubmit={async e => {
                 e.preventDefault();
                 await reset();
-                this.setState({ email: '' });
+                this.setState({ password: '', confirmPassword: '' });
               }}
             >
-              <h2>Forget password?</h2>
-              <label htmlFor="email">
-                Email
+              <h2>Reset Your Password</h2>
+              <label htmlFor="password">
+                Password
                 <input
-                  type="email"
-                  name="email"
-                  placeholder="email"
-                  value={this.state.email}
+                  type="password"
+                  name="password"
+                  placeholder="password"
+                  value={this.state.password}
                   onChange={this.saveToState}
                 />
               </label>
-              <button type="submit">Request Reset</button>
+              <label htmlFor="password">
+                Confirm Password
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="confirm password"
+                  value={this.state.confirmPassword}
+                  onChange={this.saveToState}
+                />
+              </label>
+              <button type="submit">Reset Your Password</button>
             </form>
           );
         }}
